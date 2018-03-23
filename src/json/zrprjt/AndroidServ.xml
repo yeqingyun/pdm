@@ -1,0 +1,9 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<package name="androidServ" extends="webwork-default">
+		<action name="AndrServLogin" class="zrprjt.ww.json.android.AndrServLogin">
+			<result name="success">/jsp/app.jsp</result>
+		</action>
+	</package>
+</xwork>

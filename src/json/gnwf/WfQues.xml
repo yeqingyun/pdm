@@ -1,0 +1,67 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfQues" extends="webwork-default,intercept">
+		<action name="WfQues" class="gnwf.ww.json.WfQuesAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnwf/WfQues/list.jsp</result>
+			<result name="mytasklist">/liger/gnwf/WfQues/myTaskList.jsp</result>
+			<result name="tasklist">/liger/gnwf/WfQues/tasklistmgr.jsp?taskId=${taskId}&amp;wfNo=${wfNo}</result>
+			<result name="tasklistmgr">/liger/gnwf/WfQues/tasklistmgr.jsp?taskId=${taskId}&amp;wfNo=${wfNo}</result>
+			<result name="schelist">/liger/gnwf/WfQues/schelist.jsp?prjtNo=${prjtNo}&amp;isRisk=${isRisk}</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/quesMsg.jsp</result>
+			<result name="addrisk">/liger/gnwf/WfQues/addrisk.jsp</result>
+			<result name="add">/liger/gnwf/WfQues/add.jsp</result>
+			<result name="edit">/liger/gnwf/WfQues/edit.jsp</result>
+			<result name="editQuesUI">/liger/gnwf/WfQues/editUI.jsp</result>
+			<result name="view">/liger/gnwf/WfQues/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/gnwf/WfQues/upload.jsp?wfQues.wfNo=${wfQues.wfNo}</result>
+			<result name="print">/liger/gnwf/WfQues/print.jsp</result>
+			<result name="retrans">/liger/zrprjt/PrjtUsr/selectPrjtUsr.jsp</result>
+			<result name="selcResponsible">/liger/zrprjt/PrjtUsr/selectResponsible.jsp</result>
+			<result name="excelpoi" type="excelpoi">
+			</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfQuesxls</param>
+			</result>
+			<result name="excel1" type="excel">
+				<param name="filename">waitForMeSolve_wfQuesxls</param>
+			</result>
+			<result name="excel2" type="excel">
+				<param name="filename">resolved_wfQuesxls</param>
+			</result>
+			<result name="excel3" type="excel">
+				<param name="filename">propose_wfQuesxls</param>
+			</result>
+			<result name="excel4" type="excel">
+				<param name="filename">waitForMeVer_wfQuesxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+			
+			<result name="quesManager">/liger/gnwf/WfQues/quesManager.jsp</result>
+			<result name="wfQuesManager">/liger/gnwf/WfPp/WfPpQuesManager.jsp</result>
+			
+			<result name="managerQues">/liger/gnwf/WfQues/managerQues.jsp</result>
+			
+			<result name="managerQuesGoRiskTask">/liger/gnwf/WfQues/managerQuesGoRiskTask.jsp</result>
+			
+			<result name="managerCloseQuesReason">/liger/gnwf/WfQues/managerCloseQuesReason.jsp</result>
+			<result name="batchManagerCloseQuesReason">/liger/gnwf/WfQues/batchManagerCloseQuesReason.jsp</result>
+			
+			<result name="uploadFile">/liger/gnwf/WfQues/uploadFile.jsp</result>
+			<result name="riskQuesManager">/liger/gnwf/WfQues/RiskQuesManager.jsp</result>
+			<result name="download" type="stream">
+			     <param name="inputName">inputStream</param>
+			     <param name="contentType">${contentType}</param>
+			     <param name="contentDisposition">attachment;filename="${fileName}"</param>
+			     <param name="bufferSize">4096</param>
+			</result>
+			<result name="viewpic">/liger/gnwf/WfQues/viewpic.jsp</result>
+		</action>
+	</package>
+</xwork>

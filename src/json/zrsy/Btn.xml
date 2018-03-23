@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="btn" extends="webwork-default,intercept">
+		<action name="Btn" class="zrsy.ww.json.BtnAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrsy/Btn/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrsy/Btn/add.jsp</result>
+			<result name="edit">/liger/zrsy/Btn/edit.jsp</result>
+			<result name="view">/liger/zrsy/Btn/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrsy/Btn/upload.jsp</result>
+			<result name="print">/liger/zrsy/Btn/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">btnxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

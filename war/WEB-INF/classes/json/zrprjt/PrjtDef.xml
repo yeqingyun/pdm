@@ -1,0 +1,66 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="prjtDef" extends="webwork-default,intercept">
+		<action name="PrjtDef" class="zrprjt.ww.json.PrjtDefAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrprjt/PrjtDef/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<!--result name="message">/jsp/msg.jsp</result  -->
+			<result name="message">/jsp/prjtDefmessage.jsp</result>
+			<result name="add">/liger/zrprjt/PrjtDef/add.jsp</result>
+			<result name="edit">/liger/zrprjt/PrjtDef/edit.jsp</result>
+			<result name="view">/liger/zrprjt/PrjtDef/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrprjt/PrjtDef/upload.jsp</result>
+			<result name="print">/liger/zrprjt/PrjtDef/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">prjtDefxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+			<result name="showGant">/plusgantt/demo/SetSchCfg.jsp</result>
+			
+			<result name="showGant">/plusgantt/demo/SetSchCfg.jsp</result>
+			<result name="projInfor">/liger/zrprjt/PrjtDef/projectInfor.jsp</result>
+			
+			<result name="projtDoc">/liger/zrprjt/PrjtDef/prjtDoc.jsp</result>
+			
+			<result name="projtSurvey">/liger/zrprjt/PrjtDef/projtSurvey.jsp</result>
+			
+			<result name="prjtPointFrameAnnex">/liger/zrprjt/PrjtDef/prjtPointFrameAnnex.jsp</result>
+			
+			<result name="taskManger">/liger/zrprjt/PrjtDef/tasksManage.jsp</result>
+			
+			<result name="prjtPointManger">/liger/zrprjt/PrjtDef/PrjtpointManage.jsp</result>
+			
+			<result name="selectWfRd">/liger/zrprjt/PrjtDef/selectWfRd.jsp</result>
+			
+			<result name="doc">/liger/docPreIndex.jsp</result>
+			<result name="showSendMail">/liger/zrprjt/PrjtDef/sendMail.jsp</result>
+			
+			<result name="upPrjtDefFile">/liger/zrprjt/PrjtDef/uploadFile.jsp</result>
+			
+			<result name="download" type="stream">
+			     <param name="inputName">inputStream</param>
+			     <param name="contentType">${contentType}</param>
+			     <param name="contentDisposition">attachment;filename="${fileName}"</param>
+			     <param name="bufferSize">2048</param>
+			</result>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</action>
+	</package>
+</xwork>

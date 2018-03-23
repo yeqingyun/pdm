@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="shareRela" extends="webwork-default,intercept">
+		<action name="ShareRela" class="gnfs.ww.json.ShareRelaAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnfs/ShareRela/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/gnfs/ShareRela/add.jsp</result>
+			<result name="edit">/liger/gnfs/ShareRela/edit.jsp</result>
+			<result name="view">/liger/gnfs/ShareRela/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/gnfs/ShareRela/upload.jsp</result>
+			<result name="print">/liger/gnfs/ShareRela/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">shareRelaxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

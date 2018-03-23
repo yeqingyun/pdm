@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="prjtAuth" extends="webwork-default,intercept">
+		<action name="PrjtAuth" class="zrprjt.ww.json.PrjtAuthAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrprjt/PrjtAuth/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrprjt/PrjtAuth/add.jsp</result>
+			<result name="edit">/liger/zrprjt/PrjtAuth/edit.jsp</result>
+			<result name="view">/liger/zrprjt/PrjtAuth/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrprjt/PrjtAuth/upload.jsp</result>
+			<result name="print">/liger/zrprjt/PrjtAuth/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">prjtAuthxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

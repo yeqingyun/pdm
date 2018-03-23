@@ -1,0 +1,45 @@
+.frmInsetCon{width:100%;height:auto!important;height:620px;min-height:620px;}
+span.red{color:#f00;}
+span.green{color:#527d00;}
+span.blue{color:#000fff;}
+/*process*/
+.protitle{padding:10px;background:#e5f2ff;border-bottom:1px solid #c5e1fd;}
+.process .title{float:left;}
+.process .title li{float:left;padding:3px 12px;margin:0 8px;}
+.process .title li.cur{background:#458FCE;}
+.process .title li.cur a{color:#fff;} 
+.process .title li.cur a:hover{color:#fff;} 
+.process .viewExplain{float:right;padding:3px;}
+
+/*任务办理*/
+.handle{padding:20px;position:relative;color:#4a4a4a;}
+.handle .preBtn{position:absolute;width:138px;height:39px;background:url(../images/processimg/previewbtn.png) no-repeat;cursor:pointer;right:20px;top:20px;}
+.handle dl{border-bottom:1px dotted #a4a4a4;padding:15px;}
+.handle dd{line-height:20px;padding-left:10px;}
+.handle dd .listTable{padding:0;margin:10px 0;}
+.handle dt{height:26px;line-height:26px;font-size:14px;color:#f60;font-weight:bold;background:url(../images/processimg/arrow.png) no-repeat left center;padding-left:10px;}
+.handle dt span{font-size:12px;font-weight:normal;padding-left:5px;}
+.handle dt span a{padding-right:5px;}
+.workFlow table{font-size:12px;margin:6px 0 15px 0;line-height:18px;}
+.workFlow table th.tit{height:26px;line-height:26px;color:#fff;background:url(../images/processimg/tablebgc.jpg) repeat-x;padding:0;border:none;}
+.workFlow table th.tit .l{float:left;width:8px;height:26px;background:url(../images/processimg/tablebgl.jpg) no-repeat;}
+.workFlow table th.tit .c{float:left;padding-left:10px;}
+.workFlow table th.tit .r{float:right;width:7px;height:26px;background:url(../images/processimg/tablebgr.jpg) no-repeat;}
+.workFlow table td,.workFlow table th{border-left:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:8px;text-align:left;}
+.workFlow table th{background:#f6f6f6;}
+.workFlow table img{vertical-align:top;}
+.workFlow .workFlowBtn{width:45px;height:20px;line-height:20px;text-align:center;color:#fff;border:none;background:url(../images/processimg/processbtnbg.png) no-repeat;cursor:pointer;}
+.botBtn{margin:15px;}
+.funcBtn{width:78px;height:27px;text-align:center;color:#fff;font-size:14px;background:url(../images/processimg/funcbtn.png) no-repeat;border:none;cursor:pointer;}
+
+
+/*流程预览*/
+.handle h2 .name{font-size:14px;color:#00f;}
+
+.botBtn{margin:15px;}
+.botBtn .funcBtn{width:84px;height:24px;line-height:24px;text-align:center;color:#36434E;background:url(../images/processimg/funcbtn.png) no-repeat;border:none;cursor:pointer;}
+.botBtn .bigtxt{width:110px;height:26px;line-height:26px;font-size:16px;text-align:center;color:#36434E;background:url(../images/processimg/funcbigbtn.png) no-repeat;border:none;cursor:pointer;}
+
+.stopBtn{position:absolute;width:138px;height:39px;background:url(../images/processimg/stoplc.png) no-repeat;cursor:pointer;right:150px;top:20px;}
+.preBtn{position:absolute;width:138px;height:39px;background:url(../images/processimg/previewbtn.png) no-repeat;cursor:pointer;right:30px;top:20px;}
+

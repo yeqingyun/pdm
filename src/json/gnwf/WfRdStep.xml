@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfRdStep" extends="webwork-default,intercept">
+		<action name="WfRdStep" class="gnwf.ww.json.WfRdStepAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnwf/WfRdStep/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/gnwf/WfRdStep/add.jsp</result>
+			<result name="edit">/liger/gnwf/WfRdStep/edit.jsp</result>
+			<result name="view">/liger/gnwf/WfRdStep/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/gnwf/WfRdStep/upload.jsp</result>
+			<result name="print">/liger/gnwf/WfRdStep/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfRdStepxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

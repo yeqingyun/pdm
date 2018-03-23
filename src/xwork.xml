@@ -1,0 +1,189 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xgnsy/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+
+	<include file="/json/zrsy/AddrBook.xml"/>
+	<include file="/json/zrsy/Btn.xml"/>
+	<include file="/json/zrsy/Com.xml"/>
+	<include file="/json/zrsy/Dept.xml"/>
+	<include file="/json/zrsy/Gp.xml"/>
+	<include file="/json/zrsy/GpBtn.xml"/>
+	<include file="/json/zrsy/GpMenu.xml"/>
+	<include file="/json/zrsy/GpNode.xml"/>
+	<include file="/json/zrsy/GpUsr.xml"/>
+	<include file="/json/zrsy/Menu.xml"/>
+	<include file="/json/zrsy/Node.xml"/>
+	<include file="/json/zrsy/SyDef.xml"/>
+	<include file="/json/zrsy/Usr.xml"/>
+
+	<include file="/json/zrprjt/Driver.xml"/>
+	<include file="/json/zrprjt/DriverDtl.xml"/>
+	<include file="/json/zrprjt/DriverRd.xml"/>
+
+	<include file="/json/zrprjt/PrjtDef.xml"/>
+	<include file="/json/zrprjt/PrjtRole.xml"/>
+	<include file="/json/zrprjt/PrjtTyp.xml"/>
+	<include file="/json/zrprjt/PrjtUsr.xml"/>
+	<include file="/json/zrprjt/SchCfg.xml"/>
+	<include file="/json/zrprjt/SchDtl.xml"/>
+	<include file="/json/zrprjt/SchWf.xml"/>
+	<include file="/json/zrprjt/Task.xml"/>
+	<include file="/json/zrprjt/TaskMsg.xml"/>
+	<include file="/json/zrprjt/TaskWf.xml"/>
+	<include file="/json/zrprjt/AndroidServ.xml"/>
+	
+	
+	<include file="/json/gnmail/Mail.xml"/>
+	<include file="/json/gnmail/MailAutoM.xml"/>
+	<include file="/json/gnmail/MailBook.xml"/>
+	<include file="/json/gnmail/MailCfg.xml"/>
+	<include file="/json/gnmail/MailDoc.xml"/>
+	<include file="/json/gnmail/MailGroup.xml"/>
+	<include file="/json/gnmail/MailTmpl.xml"/>
+	<include file="/json/gnmail/MailTmplG.xml"/>
+	<include file="/json/gnmail/MailTo.xml"/>
+	
+	<include file="/json/gnwf/WfCfg.xml"/>
+	
+	<include file="/json/gnwf/WfAgent.xml"/>
+	<include file="/json/gnwf/WfCate.xml"/>
+	<include file="/json/gnwf/WfCfgRelate.xml"/>
+	<include file="/json/gnwf/WfDept.xml"/>
+	<include file="/json/gnwf/WfDoc.xml"/>
+	<include file="/json/gnwf/WfDocRev.xml"/>
+	<include file="/json/gnwf/WfField.xml"/>
+	<include file="/json/gnwf/WfFieldStepRelate.xml"/>
+	<include file="/json/gnwf/WfItem.xml"/>
+	<include file="/json/gnwf/WfJob.xml"/>
+	<include file="/json/gnwf/WfJobUser.xml"/>
+	<include file="/json/gnwf/WfJobUserRelte.xml"/>
+	<include file="/json/gnwf/WfLeader.xml"/>
+	<include file="/json/gnwf/WfMatl.xml"/>
+	<include file="/json/gnwf/WfMatlApply.xml"/>
+	<include file="/json/gnwf/WFMatlCategory.xml"/>
+	<include file="/json/gnwf/WfMatlEval.xml"/>
+	<include file="/json/gnwf/WfMatlPro.xml"/>
+	<include file="/json/gnwf/WfQues.xml"/>
+	<include file="/json/gnwf/WfQuesDtl.xml"/>
+	<include file="/json/gnwf/WfQuesRelate.xml"/>
+	<include file="/json/gnwf/WfRd.xml"/>
+	<include file="/json/gnwf/WfRdField.xml"/>
+	<include file="/json/gnwf/WfRdSign.xml"/>
+	<include file="/json/gnwf/WfRdStep.xml"/>
+	<include file="/json/gnwf/WfRdTask.xml"/>
+	<include file="/json/gnwf/WfRelate.xml"/>
+	<include file="/json/gnwf/WfReply.xml"/>
+	<include file="/json/gnwf/WfStep.xml"/>
+	<include file="/json/gnwf/WfStepNext.xml"/>
+	<include file="/json/gnwf/WfStepUser.xml"/>
+	<include file="/json/gnwf/WfStepUserHis.xml"/>
+	<include file="/json/gnwf/DocRole.xml"/>
+	<include file="/json/gnwf/WfPpReport.xml"/>
+	<include file="/json/gnwf/ProcFileWfDoc.xml"/>
+	<include file="/json/gnwf/BaseLibWfDoc.xml"/>
+	<include file="/json/gnwf/ShareLibWfDoc.xml"/>
+	<include file="/json/gnwf/QuesResp.xml"/>
+	<include file="/json/gnwf/WfRisk.xml"/>
+	<include file="/json/gnwf/WfRiskReply.xml"/>
+	<include file="/json/gnwf/AfterUpload.xml"/>
+	<include file="/json/gnwf/CQDefect.xml"/>
+	<!--fileupload-->
+	<include file="/upload/FileServiceSignature.xml"/>
+	
+	
+	<package name="default" extends="webwork-default,intercept">
+	    <global-results>
+	        <result name="json" type="dispatcher">
+	            <param name="location">/jsp/app.jsp</param>    
+	        </result>
+	    </global-results>
+		<action name="index" class="zrprjt.ww.liger.IndexAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="adminInitializes">/liger/index.jsp</result>
+			<result name="initializes">/liger/preIndex.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+		
+		<action name="preIndex" class="zrprjt.ww.liger.PreIndexAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/preIndex.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+
+		<action name="ligerTree" class="zrsy.ww.liger.TreeAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+
+		<action name="prjtTree" class="zrprjt.ww.liger.TreeAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+		
+		<action name="ligerToolBar" class="zrsy.ww.liger.ToolBarAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+
+		<action name="ligerToolBar0" class="zrsy.ww.liger.ToolBar0Action">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+		
+		<action name="ligerToolBar1" class="zrsy.ww.liger.ToolBar1Action">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+		
+		<action name="ligerToolBar2" class="zrsy.ww.liger.ToolBar2Action">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/jsp/app.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+		
+		<action name="Login" class="zrsy.ww.LoginAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/Login.shtml</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/login.jsp</result>
+			<result name="success">/loged.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+
+		<action name="Upload" class="zrsy.ww.UploadAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="index">/liger/fileupload/index.jsp</result>
+		</action>
+	</package>
+</xwork>
+ 

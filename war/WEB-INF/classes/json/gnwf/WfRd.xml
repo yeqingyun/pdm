@@ -1,0 +1,88 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfRd" extends="webwork-default,intercept">
+		<action name="WfRd" class="gnwf.ww.json.WfRdAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/message.jsp</result>
+			<result name="nopermission">/jsp/message.jsp</result>
+			<result name="initializes">/liger/gnwf/WfRd/list.jsp</result>
+			<result name="guihauList">/liger/gnwf/WfRd/guihauList.jsp</result>
+			<result name="mytasklist">/liger/gnwf/WfRd/MyTaskList.jsp</result>
+			<result name="risklist">/liger/gnwf/WfRd/risklist.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/message.jsp</result>
+			<result name="msg">/jsp/msg.jsp</result>
+			<result name="json">/jsp/app.jsp</result>
+			<result name="add">/liger/gnwf/WfRd/add.jsp</result>
+			<result name="addForFlow">/liger/gnwf/WfRd/addForFlow.jsp</result>
+			<result name="edit">/liger/gnwf/WfRd/edit.jsp</result>
+			<result name="view">/liger/gnwf/WfRd/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/gnwf/WfRd/upload.jsp</result>
+			<result name="print">/liger/gnwf/WfRd/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfRdxls</param>
+			</result>
+			
+			<result name="OveSeaUsrList">/liger/gnwf/WfRd/OveSeaUsrList.jsp</result>
+			<result name="AddNextStepUsers">/liger/gnwf/WfRd/addNextStepUsers.jsp</result>
+			<result name="AddNextStepAssistpUsers">/liger/gnwf/WfRd/AddNextStepAssistpUsers.jsp</result>
+			
+			<result name="error">/jsp/message.jsp</result>
+			<result name="desc">/liger/gnwf/WfRd/desc.jsp</result>
+			<result name="showSendMail">/liger/gnwf/WfRd/showSendEmail.jsp</result>
+			<result name="showSendMailForReader">/liger/gnwf/WfRd/showSendMailForReader.jsp</result>
+		</action>
+		<action name="WfRdView" class="gnwf.ww.json.WfRdViewAction">
+			<result name="nologgedin">/jsp/message.jsp</result>
+			<result name="nopermission">/jsp/message.jsp</result>
+			<result name="error">/jsp/message.jsp</result>
+			<result name="msg">/jsp/msg.jsp</result>
+			<result name="message">/jsp/message.jsp</result>
+			
+			<result name="initializes">/liger/gnwf/WfRd/view.jsp</result>
+			<result name="wfRdView">/liger/gnwf/WfRd/WfRdView.jsp</result>
+			<result name="wfTaskView">/liger/gnwf/WfRd/WfTask.jsp</result>
+			<result name="wfTaskViewForFlow">/liger/gnwf/WfRd/WfTaskForFlow.jsp</result>
+			
+			<result name="list">/jsp/app.jsp</result>
+			<result name="return">/WfRdView.shtml</result>
+			<result name="nextStepPage">/liger/gnwf/WfRd/nextStepPage.jsp</result>
+			<result name="print">/liger/gnwf/WfRd/OWfPrint.jsp</result>
+			<result name="showForm">/liger/gnwf/WfRd/wfFormView.jsp</result>
+			<result name="wfgDesc">/liger/gnwf/WfRd/WFDesc.jsp</result>
+			<result name="success">/jsp/message.jsp</result>
+			<result name="wfDocCateView">/liger/gnwf/WfRd/WfDocCateView.jsp</result>
+			<result name="wfRdViewWfDoc">/liger/gnwf/WfRd/WfDocCate.jsp</result>
+			
+			<result name="WfInforView">/liger/gnwf/WfRd/OWfRdInforView.jsp</result>
+			<result name="setAgentByUI">/liger/gnwf/WfRd/SetAgentUI.jsp</result>
+			<result name="addRdExtendUri">/jsp/app.jsp</result>
+			<result name="json">/jsp/app.jsp</result>
+			<result name="exportExcel" type="excel">
+				<param name="filename">WfRdXls</param>
+			</result>
+			
+		</action>
+		
+		
+		<action name="WFSelectUser" class="gnwf.ww.json.WFSelectUserAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/message.jsp</result>
+			<result name="nopermission">/jsp/message.jsp</result>
+			<result name="error">/jsp/message.jsp</result>
+			<result name="initializes">/liger/gnwf/WfRd/WFSelectUser.jsp</result>
+			<result name="success">/jsp/message.jsp</result>
+		</action>
+		<action name="MailToAdd" class="gnwf.ww.json.MailToAddAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/message.jsp</result>
+			<result name="nopermission">/jsp/message.jsp</result>
+			<result name="initializes">/liger/gnwf/WfRd/MailToAdd.jsp</result>
+			<result name="success">/jsp/message.jsp</result>
+			<result name="error">/jsp/message.jsp</result>
+		</action>
+	</package>
+</xwork>

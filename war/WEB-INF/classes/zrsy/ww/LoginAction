@@ -1,0 +1,52 @@
+package zrsy.ww;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import zrsy.facade.UsrFacade;
+import zrsy.vo.Usr;
+
+public class LoginAction extends BasicAction {
+	private static final long serialVersionUID = 1L;
+	
+	private Usr usr;
+
+	public String execute() throws Exception {
+		try {
+			
+		}
+		catch(Exception e) {
+			setMsg(MSG.F_SEA);
+			Logger.getLogger(this.getClass()).error("IndexAction Exception", e);
+			return ERROR;
+		}
+		return INITIALIZES;
+	}
+
+	public String login() throws Exception {
+		try {
+			List<Usr> usrs = new UsrFacade().find(usr);
+			
+			if(usrs != null && usrs.size() >0) {
+				setUsrSession(usr);
+				setMsg(MSG.S_LOG);
+			}
+			else {
+				setMsg(MSG.F_LOG);
+			}
+		}
+		catch(Exception e) {
+			setMsg(MSG.F_SEA);
+			Logger.getLogger(this.getClass()).error("IndexAction Exception", e);
+			return ERROR;
+		}
+		return INITIALIZES;
+	}
+	public Usr getUsr() {
+		return usr;
+	}
+	public void setUsr(Usr usr) {
+		this.usr = usr;
+	}
+}

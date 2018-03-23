@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="PlusGantt使用Javascript开发的、基于Web网页的项目管理甘特图产品。可广泛应用于项目管理系统、 ERP 系统、MES系统或其它的任务资源分配相关领域。" />
+<meta name="Keywords" content="甘特图,项目管理,gantt,project" />
+<title>普加甘特图(PlusGantt) V3.0 开发文档</title>
+<style type="text/css">
+	body{font-size:14px;background:white;}
+	p{line-height:20px;}
+	li{margin-top:3px;}
+	h1 /* Title */ {
+	}
+	h2 /* Chapter Header */ {
+		background-color: #DCE7F2;
+		border: solid 1px #CCD7E0;
+		padding: 10px;
+		
+		margin-top: 50px;
+		margin-left: 5px;
+	}
+	h3 /* Section Header */  {
+		background-color: #dDeeEB;
+		padding: 8px;padding-bottom:5px;
+        line-height:25px;
+		margin-left: 15px;
+	}
+	h4 {
+		background-color: #ddd;
+		padding: 7px;
+		
+		margin-left: 20px;
+	}
+	
+	h5 {
+		background-color: #F0F0F0;
+		padding: 4px;
+
+		font-weight: normal;
+
+		margin-left: 25px;
+	}
+	
+	p,div.des {
+		margin-left: 35px;
+	}
+	div.des span{float:left;}
+	div.des ul,div.des ol{ overflow:auto; margin:0; zoom:1;}
+	div.des li{margin-bottom:5px;}
+	span.function  {
+		font-weight: bold;
+	}
+	span.parameter {
+		font-style: italic;
+		font-weight: normal;
+	}
+	
+	hr {
+		margin-right: 25px;
+	}
+	
+	ul, ol {
+		list-style-position: inside;
+		margin: 0;
+		padding: 0;
+		margin-left: 25px;
+	}
+	li {
+		padding-left: 15px;
+	}
+	
+	.code {
+		border: solid 1px #ccc;
+		background-color: #FAFAFA;
+		padding: 5px;
+		padding-left:15px;
+		padding-bottom:10px;
+		margin-left: 25px;		
+	}
+	.des{color:#666; border:1px dashed #ccc; padding:5px;}
+	.des span{color:#f60;}
+	del{color:red;}
+	.add{
+		color:green;
+	}
+	
+	.apitable
+	{
+		width: 900px;margin-left:40px;BORDER-COLLAPSE: separate !important;BORDER-COLLAPSE: collapse;
+        border-right:solid 1px #555;
+		border-bottom:solid 1px #555;	     
+		table-layout: fixed;   /*使td的宽度不因为内容自动变长*/
+        width: 0px;     
+    }
+	.apitable td
+	{
+		padding:3px;font-size:12px;
+		border-top:solid 1px #555;
+		border-left:solid 1px #555;
+		font-family:"Lucida Sans","Lucida Grande",Arial;
+	}
+	.hd td
+	{
+		background:#ccc;font-size:15px;font-weight:bold;
+	}
+	.col1{width:230px}
+	.col2{width:250px}
+	.col3{width:420px}
+</style>
+</head>
+<body>
+	<h1>普加甘特图(PlusGantt) V3.0 开发文档</h1>
+    
+	<p>更新时间：2010-04-01</p>	
+	<p>
+	上海普加软件有限公司
+	</p>
+	<h2>目录</h2>
+	<ol class="toc">
+		<li><a href="#what">PlusGantt</a></li>       			
+		<li><a href="#how">如何使用？</a></li>		
+        <li><a href="#data">甘特图数据结构</a></li>
+		<li><a href="#ext">集成到第三方JS框架(jQuery、Ext等)</a></li>
+		<li><a href="#global">语言本地化</a></li>		
+		<li><a href="#api">PlusGantt API参考</a></li>
+		<li><a href="#faq">常见问题</a>
+		    <ul>
+		        <li><a href="#columntype">自定义列</a></li>
+		        <li><a href="#diydisplay">自定义单元格 </a></li>
+		        <li><a href="#diydisplaygantt">自定义条形图 </a></li>
+		        <li><a href="#diyeditable">控制单元格可编辑 </a></li>			        
+		    </ul>		
+		</li>		
+		<li><a href="#update">历史更新</a></li>	
+		<li><a href="#support">获得支持</a></li>
+
+	</ol>
+
+
+	<h2><a name="what"></a>PlusGantt</h2>
+	<p>
+		<b>PlusGantt（普加甘特图）是使用Javascript开发的、基于Web网页的甘特图控件。<br /></b>
+		可广泛应用于项目管理系统、 ERP 系统、MES系统或其它的任务资源分配相关领域。<br /><br />
+        
+        
+        基于WEB网页显示，无需安装任何插件。<br />
+        显示为左侧任务表格、右侧时间轴刻度条形图的甘特图界面。<br />
+        支持跟踪甘特图视图。可对比“计划任务”与“实际任务”的区别。<br />
+        支持分级加载，不一次性加载全部数据。这样可以支持大数据量显示。<br />
+        支持年/月/日/时/分/秒等不同时间刻度单位。<br />				        
+		支持表格列、条形图外观、ToolTip提示信息、右键菜单等任意自定义。<br />		
+		跨所有浏览器显示，如IE(1.5+)、FireFox、Chrome、Opera、Safari等。<br />
+		跨任意服务端平台，如ASP.NET、ASP、PHP、JSP、ColdFusion、Ruby on Rails等都可以使用。<br />
+		语言本地化。包括英语、中文、日文和其他任意的语言。		
+		<br /><br />
+		PlusGantt只需要您提供一个简单的数据结构，就能在WEB网页上显示一个漂亮的甘特图。<br />		
+		您可以轻松修改它任意部位的外观，比如单元格、条形图、提示信息等。<br />		
+	</p>        
+
+	<h2><a name="how"></a>如何使用？</h2>
+	<p>	
+	    PlusGantt是一个Javascript控件，运行在WEB浏览器中。与服务端平台和数据库无关。<br /><br />
+	    使用者需要用Ajax从服务端获取甘特图数据，是一个简单的树形结构。<br />	    	    
+	    <br />	    
+	    甘特图数据到达页面后，使用PlusGantt的loadTasks方法，加载显示甘特图界面。<br /><br />
+	    然后，使用者可以做如下自定义处理：	        
+    </p>
+    <ol>
+        <li>扩展表格列，比如扩展部门、负责人、权重等列。</li>
+        <li>外观自定义：单元格、条形图和任务提示框等。</li>
+        <li>其他。如右键菜单、时间刻度、条形图生成、分级加载、语言本地化等处理。</li>
+    </ol>
+    <p >
+        普加甘特图能很好完成在WEB上显示甘特图的功能。<br />
+        但是如果您需要在WEB上实现一个类似微软Project功能逻辑的控件，请查看<a href="http://www.plusgantt.com/project/">普加项目管理控件PlusProject</a>。
+        <br />
+       
+    </p>    
+	
+	<h2><a name="data"></a>甘特图数据结构</h2>    
+    <p>
+        PlusGantt数据是一个树形结构的任务数据。这里是JSON格式的数据。<br />
+        下一级子任务由"children"属性体现。<br />
+        前置任务由"PredecessorLink"属性体现。
+    </p>
+    <b style="padding-left:25px;">列表结构（UID、ParentTaskUID）：</b>
+<pre class="code">
+[{
+    "<b>UID</b>": "1",
+    "Name": "项目范围规划",
+    "Duration": 8,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-10T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [],
+    "<b>ParentTaskUID</b>": -1
+},
+{
+    "<b>UID</b>": "2",
+    "Name": "确定项目范围",
+    "Duration": 1,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [],
+    "<b>ParentTaskUID</b>": "1"
+},
+{
+    "UID": "3",
+    "Name": "获得项目所需资金",
+    "Duration": 2,
+    "Start": "2007-01-02T00:00:00",
+    "Finish": "2007-01-03T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "<b>PredecessorLink</b>": [{
+        "Type": 1,
+        "PredecessorUID": "2" 
+    }],
+    "ParentTaskUID": "1"
+},
+...
+]
+</pre>
+    <b style="padding-left:25px;">树形结构（children）：</b>
+<pre class="code">
+[
+    {
+        UID: "1",                      //任务唯一标识符
+        Name: "项目范围规划",            //任务名称
+        Duration: 4,                   //工期
+        Start: "2007-01-01T00:00:00",   //开始日期
+        Finish: "2007-01-04T23:59:59",  //完成日期
+        PercentComplete: 14,            //完成百分比
+        Summary: 1,                     //摘要任务
+        Critical: 1,                    //关键任务    
+        Milestone: 0,                   //里程碑    
+        PredecessorLink: [],            //前置任务
+        <b>children</b>: [
+             {
+                UID: "2",
+                Duration: 4,
+                Start: "2007-01-01T08:00:00",                
+                Finish: "2007-01-01T12:00:00",
+                PercentComplete: 100,
+                Summary: 0,
+                Critical: 1,
+                Name: "确定项目范围",
+                Milestone: 0,
+                PredecessorLink: []
+            },
+            {
+                UID: "3",
+                Duration: 8,
+                Start: "2007-01-01T13:00:00",                
+                Finish: "2007-01-02T12:00:00",
+                PercentComplete: 0,
+                Summary: 0,
+                Critical: 1,
+                Name: "获得项目所需资金",
+                Milestone: 0,
+                <b>PredecessorLink</b>: [          //前置任务
+                    {               
+                        PredecessorUID: "2",
+                        Type": 1
+                    }
+                ]
+            },
+            ....//更多子任务
+        ]
+    },
+    .... //更多任务
+]
+</pre>
+<p>任务属性描述如下：</p>
+<ul>
+    <li>UID：必须。String。唯一标识符。是一个任意的字符串或数字，确保任务UID不重复。</li>
+    <li>Name：必须。String。任务名称。</li>
+    <li>Start：必须。Date。开始日期。</li>
+    <li>Finish：必须。Date。完成日期。</li>
+    <li>Duration：必须。Number。工期。</li>
+    <li>PercentComplete：必须。Number(0~100)。完成百分比。显示为上下居中的进度条。</li>
+    <li>PredecessorLink：Array。前置任务。<br />
+            <span style="padding-left:170px;font-weight:bold;">四种任务关系Type：完成-完成(FF) 0，完成-开始(FS) 1，开始-完成(SF) 2，开始-开始(SS) 3。</span></li>
+    <li>Summary：Number(0或1)。摘要任务。当一个任务下有子任务的时候，这个任务就是摘要任务，当Summary为1时，此任务会两端黑色箭头显示。</li>
+    <li>Critical：Number(0或1)。关键任务。当Critical为1时，显示一个红色条形图。</li>
+    <li>Milestone：Number(0或1)。里程碑。当Milestone为1时，显示一个菱形图标。</li>    
+</ul>
+    
+	
+	<h3><a name="ext"></a>集成到第三方JS框架(jQuery、Ext等)</h3>
+	<p>首先，对于jQuery, YUI, Prototype.js等框架来说，它们对页面的操作基于原始Dom元素的。<br />
+	    所以，你可以不用做任何额外的处理，按PlusProject正常的例子，把项目甘特图对象加入到页面元素就可以了。
+	</p>
+	<p>其次，对于ExtJS这样封装度很高的框架，可以从Ext对象找到它的dom，然后render加入即可。使用代码如下：<br />	
+	</p>			
+<pre class="code">
+//获取ext控件对象
+var extControl = Ext.get(id);
+
+//设置尺寸为100%自适应
+gantt.setStyle("width:100%;height:100%");
+
+//把project加入到ext控件对象的dom属性中
+gantt.render(extControl.dom);
+
+</pre>
+	<p>只需要这样设置后，PlusProject就能在Ext的布局面板中自动调整尺寸大小，看上去跟Ext原生的控件一样了。</p>
+
+	
+	<h3><a name="global"></a>语言本地化</h3>
+	<p>如果要显示他语言界面，只需要引用locale文件夹下资源js文件即可，例如英文资源包使用如下：</p>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">script </span><span style="color:red">src</span><span style="color:blue">="../scripts/miniui/locale/en_US.js" </span><span style="color:red">type</span><span style="color:blue">="text/javascript"&gt;&lt;/</span><span style="color:maroon">script</span><span style="color:blue">&gt;
+</span></pre>
+    <p>语言本地化（英语）示例，请<a href="demo/en_US.html">查看这里</a>。</p>
+		
+	<h2><a name="api"></a>PlusGantt ( API )</h2>	
+	<h4>属性</h4>
+	<p>属性可以从对象直接读取，但是不能进行赋值操作。如果想对属性进行赋值，必须使用提供的方法。</p>
+	<pre class="code">
+	    var gantt = new PlusGantt();
+	    var visible= gantt.visible;         //正确
+	    gantt<b style="text-decoration: line-through;">.visible= true;           //错误!!!</b>
+	    gantt.setVisible(true);            //正确
+	</pre>
+	<table class="apitable" border=0 cellpadding="0" cellspacing="0">
+	    <tr class="hd"><td class="col1">属性</td><td class="col2">类型</td><td class="col3">描述</td></tr>     
+        <tr >
+	        <td>readOnly</td>
+	        <td >Boolean</td>
+	        <td >是否只读。</td>
+        </tr> 
+        <tr >
+	        <td>visible</td>
+	        <td >Boolean</td>
+	        <td >是否显示。</td>
+        </tr>
+        <tr >
+	        <td>style</td>
+	        <td >String</td>
+	        <td >样式。</td>
+        </tr>  
+        <tr >
+	        <td>width</td>
+	        <td >Number</td>
+	        <td >宽度。</td>
+        </tr> 
+        <tr >
+	        <td>height</td>
+	        <td >Number</td>
+	        <td >高度。</td>
+        </tr> 
+        <tr >
+	        <td>showTableView</td>
+	        <td >Boolean</td>
+	        <td >是否显示任务表格。</td>
+        </tr>
+        <tr >
+	        <td>showGanttView</td>
+	        <td >Boolean</td>
+	        <td >是否显示条形图。</td>
+        </tr>        
+        <tr >
+	        <td>showLinkLines</td>
+	        <td >Boolean</td>
+	        <td >是否显示箭头连线。</td>
+        </tr>
+        <tr >
+	        <td>showCritical</td>
+	        <td >Boolean</td>
+	        <td >是否显示关键路径</td>
+        </tr>    
+        <tr >
+	        <td>showGridLines</td>
+	        <td >Boolean</td>
+	        <td >是否条形图表格线。</td>
+        </tr>             
+       <!-- <tr >
+	        <td>AutoFillWidth</td>
+	        <td >Boolean</td>
+	        <td >是否自动撑满父元素宽度。</td>
+        </tr> 
+         <tr >
+	        <td>AutoFillHeight</td>
+	        <td >Boolean</td>
+	        <td >是否自动撑满父元素高度。</td>
+        </tr>  -->           
+        <tr >
+	        <td>timeLines</td>
+	        <td >Array</td>
+	        <td >时间线数组。<br />
+<pre>
+[
+    {date: new Date(2007, 0, 3), text: "时间线"},
+    {date: new Date(2007, 0, 5), text: "时间线2", 
+        style: "width:2px;background:red;"}
+]
+</pre>	        
+	        </td>
+        </tr>     	
+        <tr >
+	        <td>rowHeight</td>
+	        <td >Number</td>
+	        <td >行高。</td>
+        </tr>   
+         <tr >
+	        <td>allowDragDrop</td>
+	        <td >Boolean</td>
+	        <td >是否允许任务行拖拽。</td>
+        </tr> 
+        <tr >
+	        <td>multiSelect</td>
+	        <td >Boolean</td>
+	        <td >是否允许多选任务。</td>
+        </tr>              
+        <tr >
+	        <td>allowResize</td>
+	        <td >Boolean</td>
+	        <td >是否允许拖拽调整甘特图。</td>
+        </tr>              
+	</table>
+	<h4>方法</h4>		
+	<table class="apitable" border=0 cellpadding="0" cellspacing="0">
+	    <tr class="hd"><td class="col1">方法</td><td class="col2">参数类型</td><td class="col3">描述</td></tr>     
+        <tr >
+	        <td>setStyle(String)</td>
+	        <td ><pre> </pre></td>
+	        <td >设置样式，比如：gantt.setStyle("width:100%;height:400px")。</td>
+        </tr>  
+         <tr >
+	        <td>loadTasks(Array)</td>
+	        <td ><pre> </pre></td>
+	        <td >加载任务集合（树形）。</td>
+        </tr>  
+        <tr >
+	        <td>getTaskTree()</td>
+	        <td ><pre> </pre></td>
+	        <td >返回任务树形集合。</td>
+        </tr>  
+        <tr >
+	        <td>getTaskList()</td>
+	        <td ><pre> </pre></td>
+	        <td >返回任务列表集合。</td>
+        </tr>   
+        <tr >
+	        <td>getRemovedTasks()</td>
+	        <td ></td>
+	        <td >返回被删除的任务集合。</td>
+        </tr>  
+        <tr >
+	        <td>acceptChanges()</td>
+	        <td ></td>
+	        <td >恢复任务状态（撤销任务增加、删除、修改标记）。</td>
+        </tr>
+        <tr >
+	        <td>setColumns( Array )</td>
+	        <td ></td>
+	        <td >设置表格列集合。</td>
+        </tr>  
+        <tr >
+	        <td>setTreeColumn( String )</td>
+	        <td ></td>
+	        <td >设置树形节点列。</td>
+        </tr>  
+        <tr >
+	        <td>frozenColumn( start, end )</td>
+	        <td ></td>
+	        <td >锁定列。</td>
+        </tr>  
+        <tr >
+	        <td>unfrozenColumn(  )</td>
+	        <td ></td>
+	        <td >取消锁定列。</td>
+        </tr>  
+        
+
+        <tr >
+	        <td>findTasks(field, value)</td>
+	        <td >field：String。如"Duration"。<br />
+                value：Object。属性值。
+            </td>
+	        <td >返回符合条件的任务集合。</td>
+        </tr>
+        <tr >
+	        <td>getTask(taskUID)</td>
+	        <td >
+            </td>
+	        <td >根据任务UID，获取任务。</td>
+        </tr>
+        <tr >
+	        <td>getTaskByID(taskID)</td>
+	        <td >
+	        </td>
+	        <td >根据任务ID，获取任务。<br />
+<pre>
+project.filter(function(task){
+    if(task.Duration == 2) return true;
+    else return false;
+});
+</pre>	                
+	        </td>
+        </tr>   
+        <tr >
+	        <td>clearFilter()</td>
+	        <td >
+	        </td>
+	        <td >取消过滤任务
+	        </td>
+        </tr>  
+        <tr >
+	        <td>getSelected()</td>
+	        <td ><pre> </pre></td>
+	        <td >获取选中的任务。</td>
+        </tr>
+        <tr >
+	        <td>getSelecteds()</td>
+	        <td ><pre> </pre></td>
+	        <td >获取选中的任务集合。</td>
+        </tr>
+        <tr >
+	        <td>isSelected(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >判断是否选中任务。</td>
+        </tr>   
+        <tr >
+	        <td>select(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >选中任务。</td>
+        </tr>   
+        <tr >
+	        <td>deselect(task)</td>
+	        <td ></td>
+	        <td >取消选中任务。</td>
+        </tr>   
+        <tr >
+	        <td>selects(Array)</td>
+	        <td ><pre> </pre></td>
+	        <td >选中多个任务。</td>
+        </tr>   
+        <tr >
+	        <td>deselects(Array)</td>
+	        <td ></td>
+	        <td >取消选中多个任务。</td>
+        </tr> 
+        <tr >
+	        <td>selectAll()</td>
+	        <td ><pre> </pre></td>
+	        <td >选中所有任务。</td>
+        </tr>   
+        <tr >
+	        <td>deselectAll()</td>
+	        <td ></td>
+	        <td >取消选中所有任务。</td>
+        </tr> 
+        <tr >
+	        <td>getParentTask(task)</td>
+	        <td ></td>
+	        <td >获取父任务对象。</td>
+        </tr>   
+       <tr >
+	        <td>getChildTasks(task) //下一级任务<br />            
+	        <td ></td>
+	        <td >获取子任务数组。</td>
+        </tr>   
+       <tr >
+	        <td>getAllChildTasks(task)
+	        <td ></td>
+	        <td >获取所有子任务数组。</td>
+        </tr>   
+        <tr >
+	        <td>getAncestorTasks(task)</td>
+	        <td ></td>
+	        <td >获取父级任务数组。</td>
+        </tr>   
+        <tr >
+	        <td>isAncestor(parentTask, task)</td>
+	        <td > </td>
+	        <td >判断两任务之间是否有父子关系。</td>
+        </tr>  
+
+        <tr >
+	        <td>eachChild(task, fn, scope)</td>
+	        <td > </td>
+	        <td >遍历下一级子节点。</td>
+        </tr>  
+        <tr >
+	        <td>cascadeChild(task, fn, scope)</td>
+	        <td > </td>
+	        <td >遍历所有子节点。</td>
+        </tr>  
+        <tr >
+	        <td>bubbleParent(task, fn, scope)</td>
+	        <td > </td>
+	        <td >遍历父级子节点。</td>
+        </tr>  
+        <tr >
+	        <td>addTask(task)<br />
+	            addTask(task, index)<br />
+	            addTask(task, action, parentTask)<br />
+	        </td>
+	        <td >
+	            task：Object。新任务对象。<br />
+	            index：Number。加入的索引位置。<br />
+                action：String。加入的方式，before/after/add。<br />
+	            parentTask：父任务。
+	        </td>
+	        <td >新增任务。</td>
+        </tr>  
+        <tr >
+	        <td>removeTask(task) </td>
+	        <td ></td>
+	        <td >删除任务。</td>
+        </tr>  
+        <tr >
+	        <td>updateTask(task, property, value)<br />
+	            updateTask(task, keyValues) 
+	        </td>
+	        <td >
+	            property：String。任务属性名，如"Start"。<br />
+	            value：Object。属性值。<br />
+	            keyValues：Object。键值对，如{Name:'测试完成', PercentComplete: 0}
+	        </td>
+	        <td >更新任务属性。</td>
+        </tr>  
+        <tr >
+	        <td>moveTask(task, targetTask, action)</td>
+	        <td >action：String。"before"/"after"/"add"<br />
+	            targetTask：目标任务<br />
+                action：移动方式
+	        </td>
+	        <td >移动任务。</td>
+        </tr>    
+        <tr >
+	        <td>upgradeTask(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >升级任务。</td>
+        </tr>  
+        <tr >
+	        <td>downgradeTask(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >降级任务。</td>
+        </tr>      
+        <tr >
+	        <td>
+                addTasks(tasks, index, parentTasks)
+	            addTasks(tasks, action, parentTasks)<br />
+	        </td>
+	        <td >
+	            tasks：Array。新任务数组。<br />
+	            index：Number/"before"/"after"/"add"。加入方式。<br />
+	            parentTasks：Array。父任务数组。
+	        </td>
+	        <td >批量新增任务。</td>
+        </tr>  
+        <tr >
+	        <td>removeTasks(tasks) </td>
+	        <td ></td>
+	        <td >批量删除任务。</td>
+        </tr>  
+        <tr >
+	        <td>updateTasks(tasks, keyValues)<br />	            
+	        </td>
+	        <td >
+	            tasks：Array。任务数组。<br />	            
+	            keyValues：Object。键值对，如{Name:'测试完成', PercentComplete: 0}
+	        </td>
+	        <td >批量修改任务。</td>
+        </tr>        
+          
+
+
+        <tr >
+	        <td>collapseAll ( ) </td>
+	        <td ><pre> </pre></td>
+	        <td >折叠所有任务。</td>
+        </tr>  
+        <tr >
+	        <td>expandAll ( )</td>
+	        <td ><pre> </pre></td>
+	        <td >展开所有任务。</td>
+        </tr>                          
+        <tr >
+	        <td>collapseLevel( Number )</td>
+	        <td ><pre> </pre></td>
+	        <td >折叠某层级任务。</td>
+        </tr>    
+        <tr >
+	        <td>expandLevel( Number )</td>
+	        <td ><pre> </pre></td>
+	        <td >展开某层级任务。</td>
+        </tr>           
+        <tr >
+	        <td>collapse(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >折叠任务。</td>
+        </tr>    
+        <tr >
+	        <td>expand(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >展开任务。</td>
+        </tr>                  
+                       
+        <tr >
+	        <td>setShowTableView( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置表格是否显示。</td>
+        </tr>    
+        <tr >
+	        <td>setShowGanttView( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置条形图是否显示。</td>
+        </tr>
+
+        <tr >
+	        <td>setTableViewExpanded( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置表格折叠。</td>
+        </tr>    
+        <tr >
+	        <td>setGanttViewExpanded( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置条形图折叠。</td>
+        </tr>
+        <tr >
+	        <td>setTableViewWidth( Number )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置表格宽度。</td>
+        </tr>    
+        <tr >
+	        <td>setGanttViewWidth( Number )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置条形图宽度。</td>
+        </tr>
+        
+        <tr >
+	        <td>setShowLinkLines( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置是否显示箭头连线。</td>
+        </tr>    
+        <tr >
+	        <td>setShowCritical( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置是否显示关键路径</td>
+        </tr>  
+        <tr >
+	        <td>setShowGridLines( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置是否显示条形图背景表格线。</td>
+        </tr>         
+        <tr >
+	        <td>setTimeLines( Array )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置项目时间线。</td>
+        </tr>   
+        <tr >
+	        <td>setRowHeight( Number )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置行高。</td>
+        </tr>  
+        <tr >
+	        <td>setMultiSelect( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置是否多选任务。</td>
+        </tr>  
+        <tr >
+	        <td>setAllowDragDrop( Boolean )</td>
+	        <td ><pre> </pre></td>
+	        <td >设置是否允许任务行拖拽。</td>
+        </tr>
+        <tr >
+	        <td>setTopTimeScale( String )</td>
+	        <td >String：时间刻度。<br />
+            "year/halfyear/quarter/month/week/day/hour" </td>
+	        <td >设置顶层时间刻度。</td>
+        </tr>
+        <tr >
+	        <td>setBottomTimeScale( String )</td>
+	        <td ><pre>同上 </pre></td>
+	        <td >设置底层时间刻度。（底层必须比顶层要小）</td>
+        </tr>
+        <tr >
+	        <td>zoomIn(  )</td>
+	        <td > </td>
+	        <td >放大时间刻度</td>
+        </tr>
+        <tr >
+	        <td>zoomOut(  )</td>
+	        <td > </td>
+	        <td >缩小时间刻度</td>
+        </tr>
+        <tr >
+	        <td>scrollIntoView(task)</td>
+	        <td ><pre> </pre></td>
+	        <td >定位显示任务。</td>
+        </tr>
+                
+	</table>	
+	<h4>事件</h4>		
+	<p>通过如下方式监听事件：</p>
+	<pre class="code">
+	    functon onTaskDblClick(e){
+	        var project = e.source;
+            var task = e.task;
+	        //e是事件对象, 具体请看每个事件的"参数类型"
+	    }
+	    gantt.on('taskdblclick', onTaskDblClick);
+	</pre>
+	<table class="apitable" border=0 cellpadding="0" cellspacing="0">
+	    <tr class="hd"><td class="col1">事件名称</td><td class="col2">事件对象</td><td class="col3">描述</td></tr>     
+
+	    <tr >
+	        <td>drawcell</td>
+	        <td >
+	            <pre>
+{
+    source: Object, //甘特图对象
+    record: Object, //任务对象
+    column: Object, //列对象
+    field: String,  //属性名
+    value: Object,  //单元格值
+    cellHtml: Stirng//单元格内容HTML
+}
+	            </pre>
+	        </td>
+	        <td >绘制单元格时发生。</td>
+        </tr> 
+	    <tr >
+	        <td>drawitem</td>
+	        <td >
+	            <pre>
+{
+    source: Object, //甘特图对象
+    item: Object,   //条形图，任务对象
+    itemBox: Object, //条形图的坐标尺寸
+    itemHtml: Stirng//单元格内容HTML
+}
+	            </pre>
+	        </td>
+	        <td >绘制条形图时发生。</td>
+        </tr> 
+        
+	    <tr >
+	        <td>taskclick</td>
+	        <td >
+	            <pre>
+{
+    source: Object, //甘特图对象
+    task: Object    //任务对象
+}    
+	            </pre>
+	        </td>
+	        <td >单击任务时发生。</td>
+        </tr> 
+	    <tr >
+	        <td>taskdblclick</td>
+	        <td >
+	            <pre>
+{
+    source: Object, //甘特图对象
+    task: Object    //任务对象
+}    
+	            </pre>
+	        </td>
+	        <td >双击任务时发生。</td>
+        </tr>  
+         <tr >
+	        <td>taskdragdrop</td>
+	        <td >
+	            <pre>
+{
+    source: Object,     //甘特图对象
+    tasks: Array,       //被拖拽的任务集合
+    targetTask: Object, //目标任务
+    action: String,     //投放方式：before,after,append
+    cancel: Boolean     //是否取消操作
+}
+	            </pre>
+	        </td>
+	        <td >拖拽行释放时发生。</td>
+        </tr>  
+        <tr >
+	        <td>cellbeginedit</td>
+	        <td >
+	            <pre>
+{
+    source: Object,     //甘特图对象    
+    record: Object,       //任务对象
+    column: Object, //列对象
+    field: String,  //属性名
+    value: Object,  //单元格值
+    cancel: Boolean     //是否取消操作
+}
+	            </pre>
+	        </td>
+	        <td >单元格开始编辑时发生
+	        </td>
+        </tr>  
+        <tr >
+	        <td>CellCommitEdit</td>
+	        <td >
+	            <pre>
+{
+    source: Object,     //甘特图对象    
+    record: Object,       //任务对象
+    column: Object, //列对象
+    field: String,  //属性名
+    value: Object,  //单元格值
+    cancel: Boolean     //是否取消操作
+}
+	            </pre>
+	        </td>
+	        <td >单元格提交编辑值时发生
+	        </td>
+        </tr>
+        <tr >
+	        <td>itemdragstart</td>
+	        <td >
+	            <pre>
+{
+    source: Object,     //甘特图对象    
+    item: Object,       //任务对象
+    action: String,     //拖拽操作：move, start, finish, percentcomplete
+    cancel: Boolean     //是否取消操作
+}
+	            </pre>
+	        </td>
+	        <td >条形图开始拖拽时发生。</td>
+        </tr>           
+    </table>
+    
+
+<h2><a name="faq"></a>常见问题</h2>
+    <h3><a name="columntype"></a>自定义列</h3>
+    <p>开发者可以根据自己扩展的任务属性类型，来创建自己的列。</p>
+    <p>具体请参考"<a href="demo/DiyColumns.html" target="_blank">自定义列示例</a>"。</p>
+    
+    <h3><a name="diydisplay"></a>自定义单元格 </h3>
+    <p>通过监听处理"drawcell"事件，可以根据任务信息，设置行、单元格样式，以及自定义单元格Html内容。</p>
+<pre class="code">gantt.on(<span style="color: maroon">"drawcell"</span>, <span style="color: blue">function </span>(e) {
+    <span style="color: blue">var </span>task = e.record, column = e.column, field = e.field;
+
+    <span style="color: #006400">//单元格样式
+    </span><span style="color: blue">if </span>(column.name == <span style="color: maroon">"Name"</span>) {
+        e.cellCls = <span style="color: maroon">"mycellcls"</span>;
+    }
+
+    <span style="color: #006400">//行样式
+    </span><span style="color: blue">if </span>(task.Summary == 1) {
+        e.rowCls = <span style="color: maroon">"myrowcls"</span>;
+    }
+
+    <span style="color: #006400">////自定义单元格Html。如果是工期列, 并且工期大与5天, 显示红色
+    </span><span style="color: blue">if </span>(field == <span style="color: maroon">"Name" </span>&amp;&amp; task.Duration &gt; 5) {
+        e.cellHtml = <span style="color: maroon">'&lt;b style="color:red;"&gt;' </span>+ task.Name + <span style="color: maroon">'&lt;/b&gt;'</span>;
+    }
+    <span style="color: blue">if </span>(field == <span style="color: maroon">"Name" </span>&amp;&amp; task.Duration &lt;= 2) {
+        e.cellHtml = <span style="color: maroon">'&lt;span style="color:blue;"&gt;' </span>+ task.Name + <span style="color: maroon">'&lt;/span&gt;'</span>;
+    }
+
+    <span style="color: blue">if </span>(task.Duration == 0) {
+        e.rowCls = <span style="color: maroon">"deletetask"</span>;
+    }
+});
+
+</pre>
+    <p>示例请参考"<a href="demo/DiyDisplay.html" target="_blank">自定义单元格</a>"</p>
+
+    
+    <h3><a name="diydisplaygantt"></a>自定义条形图外观 </h3>
+    <p>开发者可以控制右侧条形图的HTML外观，达到任意的条形图效果：</p>
+<pre class="code"><span style="color:#006400">//1)自定义条形图外观显示
+gantt</span>.on(<span style="color:maroon">"drawitem"</span>, <span style="color:blue">function </span>(e) {
+    <span style="color:blue">var </span>item = e.item;
+    <span style="color:blue">var </span>left = e.itemBox.left,
+        top = e.itemBox.top,
+        width = e.itemBox.width,
+        height = e.itemBox.height;
+
+    <span style="color:blue">if </span>(!item.Summary &amp;&amp; !item.Milestone) {
+        <span style="color:blue">var </span>percentWidth = width * (item.PercentComplete / 100);
+
+        e.itemHtml = <span style="color:maroon">'&lt;div id="' </span>+ item._id + <span style="color:maroon">'" class="myitem" style="left:' </span>+ left + <span style="color:maroon">'px;top:' </span>+ top + <span style="color:maroon">'px;width:' </span>+ width + <span style="color:maroon">'px;height:' </span>+ (height) + <span style="color:maroon">'px;"&gt;'</span>;
+        e.itemHtml += <span style="color:maroon">'&lt;div style="width:' </span>+ (percentWidth) + <span style="color:maroon">'px;" class="percentcomplete"&gt;&lt;/div&gt;'</span>;
+        e.itemHtml += <span style="color:maroon">'&lt;/div&gt;'</span>;
+
+        <span style="color:#006400">//e.ItemHtml = '&lt;a href="http://www.baidu.com" style="left:'+left+'px;top:'+top+'px;width:'+width+'px;height:'+(height-2)+'px;" class="myitem"&gt;111&lt;/a&gt;';
+    </span>}
+});
+<span style="color:#006400">//2)自定义条形图提示信息
+gantt</span>.on(<span style="color:maroon">'itemtooltipneeded'</span>, <span style="color:blue">function </span>(e) {
+    <span style="color:blue">var </span>task = e.task;
+    e.tooltip = <span style="color:maroon">"&lt;div&gt;任务：" </span>+ task.Name + <span style="color:maroon">"&lt;/div&gt;"
+    </span><span style="color:#006400">//                +   "&lt;div &gt;&lt;div style='float:left;'&gt;进度：&lt;b&gt;"+task.PercentComplete + "%&lt;/b&gt;&lt;/div&gt;"
+    //                +   "&lt;div style='float:right;'&gt;工期："+task.Duration + "日&lt;/div&gt;&lt;/div&gt;"
+                </span>+ <span style="color:maroon">"&lt;div style='clear:both;'&gt;开始日期：" </span>+ mini.formatDate(task.Start, <span style="color:maroon">'yyyy-MM-dd'</span>) + <span style="color:maroon">"&lt;/div&gt;"
+                </span>+ <span style="color:maroon">"&lt;div&gt;完成日期：" </span>+ mini.formatDate(task.Finish, <span style="color:maroon">'yyyy-MM-dd'</span>) + <span style="color:maroon">"&lt;/div&gt;"</span>;
+});
+
+</pre>    
+    <p>示例请参考"<a href="demo/DiyDisplayGantt.html" target="_blank">自定义显示条形图</a>"</p>
+    
+    <h3><a name="diyeditable"></a>自定义单元格可编辑</h3>
+    <p>通过监听表格的"cellbeginedit"事件，可以控制每个行、每个单元格是否可编辑。</p>
+<pre class="code"><span style="color:#006400">//控制单元格是否可编辑
+gantt</span>.on(<span style="color:maroon">"cellbeginedit"</span>, <span style="color:blue">function </span>(e) {
+    <span style="color:blue">var </span>task = e.record, column = e.column, field = e.field;
+
+    <span style="color:blue">if </span>(task.Summary == 1) {
+        e.cancel = <span style="color:blue">true</span>;
+    }
+
+    <span style="color:blue">if </span>(field == <span style="color:maroon">'Duration'</span>) {
+        e.cancel = <span style="color:blue">true</span>;
+    }
+});
+</pre>    
+    <p>示例请参考"<a href="demo/DiyEditable.html" target="_blank">控制单元格可编辑</a>"</p>
+    
+    
+    
+</body>
+</html>

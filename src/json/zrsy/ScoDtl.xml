@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="scoDtl" extends="webwork-default,intercept">
+		<action name="ScoDtl" class="zrsy.ww.json.ScoDtlAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrsy/ScoDtl/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrsy/ScoDtl/add.jsp</result>
+			<result name="edit">/liger/zrsy/ScoDtl/edit.jsp</result>
+			<result name="view">/liger/zrsy/ScoDtl/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrsy/ScoDtl/upload.jsp</result>
+			<result name="print">/liger/zrsy/ScoDtl/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">scoDtlxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfMatlPro" extends="webwork-default,intercept">
+		<action name="WfMatlPro" class="gnwf.ww.json.WfMatlProAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnwf/WfMatlPro/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/gnwf/WfMatlPro/add.jsp</result>
+			<result name="edit">/liger/gnwf/WfMatlPro/edit.jsp</result>
+			<result name="view">/liger/gnwf/WfMatlPro/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/gnwf/WfMatlPro/upload.jsp</result>
+			<result name="print">/liger/gnwf/WfMatlPro/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfMatlProxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

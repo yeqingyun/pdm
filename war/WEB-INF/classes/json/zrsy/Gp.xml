@@ -1,0 +1,27 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="gp" extends="webwork-default,intercept">
+		<action name="Gp" class="zrsy.ww.json.GpAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrsy/Gp/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrsy/Gp/add.jsp</result>
+			<result name="edit">/liger/zrsy/Gp/edit.jsp</result>
+			<result name="view">/liger/zrsy/Gp/view.jsp</result>
+			<result name="index">/liger/zrsy/Gp/index.jsp</result>
+			<result name="author">/liger/zrsy/Gp/auth.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrsy/Gp/upload.jsp</result>
+			<result name="print">/liger/zrsy/Gp/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">gpxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

@@ -1,0 +1,1253 @@
+BODY {
+	COLOR: #393939; FONT-SIZE: 9pt
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+A IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TABLE {
+	BORDER-COLLAPSE: collapse
+}
+A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium
+}
+A:link {
+	COLOR: #0466cb; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0466cb; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0466cb; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0466cb; TEXT-DECORATION: none
+}
+A.A1:link {
+	COLOR: #207bd6 !important; TEXT-DECORATION: underline
+}
+A.A1:visited {
+	COLOR: #207bd6 !important; TEXT-DECORATION: underline
+}
+A.A1:active {
+	COLOR: #124164; TEXT-DECORATION: underline
+}
+A.A1:hover {
+	COLOR: #124164; TEXT-DECORATION: underline
+}
+A.orgAdd:link {
+	PADDING-LEFT: 12px; BACKGROUND: url(images/org_select.png) no-repeat 0px 0px; COLOR: #207bd6
+}
+A.orgAdd:visited {
+	PADDING-LEFT: 12px; BACKGROUND: url(images/org_select.png) no-repeat 0px 0px; COLOR: #207bd6
+}
+A.orgAdd:hover {
+	COLOR: #207bd6; TEXT-DECORATION: underline
+}
+A.orgAdd:active {
+	COLOR: #207bd6; TEXT-DECORATION: underline
+}
+A.orgClear:link {
+	PADDING-LEFT: 12px; BACKGROUND: url(images/org_select.png) no-repeat 0px -60px; COLOR: #9aa9b8; MARGIN-LEFT: 5px
+}
+A.orgClear:visited {
+	PADDING-LEFT: 12px; BACKGROUND: url(images/org_select.png) no-repeat 0px -60px; COLOR: #9aa9b8; MARGIN-LEFT: 5px
+}
+A.orgClear:hover {
+	BACKGROUND-POSITION: 0px -40px; COLOR: #207bd6; TEXT-DECORATION: underline
+}
+A.orgClear:active {
+	BACKGROUND-POSITION: 0px -40px; COLOR: #207bd6; TEXT-DECORATION: underline
+}
+A.addfile {
+	POSITION: relative; PADDING-LEFT: 12px; DISPLAY: inline-block; BACKGROUND: url(images/org_select.png) no-repeat 0px 4px; COLOR: #207bd6; TEXT-DECORATION: none
+}
+A.addfile:hover {
+	BACKGROUND-POSITION: 0px -16px; COLOR: #9aa9b8; TEXT-DECORATION: underline
+}
+INPUT.addfile {
+	POSITION: absolute; FILTER: alpha(opacity=0); WIDTH: 1px; CURSOR: pointer; LEFT: -5px; opacity: 0
+}
+A.selfile:link {
+	COLOR: #207bd6; TEXT-DECORATION: none
+}
+A.selfile:visited {
+	COLOR: #207bd6; TEXT-DECORATION: none
+}
+A.selfile:hover {
+	COLOR: #9aa9b8; TEXT-DECORATION: underline
+}
+A.selfile:active {
+	COLOR: #9aa9b8; TEXT-DECORATION: underline
+}
+A.addimage {
+	POSITION: relative; PADDING-LEFT: 12px; DISPLAY: inline-block; BACKGROUND: url(images/org_select.png) no-repeat 0px 4px; COLOR: #207bd6; TEXT-DECORATION: none
+}
+A.addimage:hover {
+	BACKGROUND-POSITION: 0px -16px; COLOR: #9aa9b8; TEXT-DECORATION: underline
+}
+A.dropdown:link {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; DISPLAY: inline-block; BACKGROUND: url(images/btn_dropdown_l.png) no-repeat left top; HEIGHT: 25px; COLOR: #373737; TEXT-DECORATION: none
+}
+A.dropdown:hover {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; DISPLAY: inline-block; BACKGROUND: url(images/btn_dropdown_l.png) no-repeat left top; HEIGHT: 25px; COLOR: #373737; TEXT-DECORATION: none
+}
+A.dropdown:active {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; DISPLAY: inline-block; BACKGROUND: url(images/btn_dropdown_l.png) no-repeat left top; HEIGHT: 25px; COLOR: #373737; TEXT-DECORATION: none
+}
+A.dropdown:visited {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; DISPLAY: inline-block; BACKGROUND: url(images/btn_dropdown_l.png) no-repeat left top; HEIGHT: 25px; COLOR: #373737; TEXT-DECORATION: none
+}
+A.dropdown:hover {
+	TEXT-DECORATION: none
+}
+A.dropdown SPAN {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 15px; DISPLAY: inline-block; WHITE-SPACE: nowrap; BACKGROUND: url(images/btn_dropdown_r.png) no-repeat right top; HEIGHT: 25px; CURSOR: pointer; PADDING-TOP: 0px
+}
+A.ToolBtn {
+	PADDING-LEFT: 5px; DISPLAY: inline-block; BACKGROUND: url(images/tool_btn.png) no-repeat left 0px; TEXT-DECORATION: none
+}
+A.ToolBtn SPAN {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 8px; PADDING-RIGHT: 13px; DISPLAY: inline-block; BACKGROUND: url(images/tool_btn.png) no-repeat right -50px; HEIGHT: 25px; COLOR: #373737 !important; CURSOR: pointer; PADDING-TOP: 0px
+}
+A.ToolBtn:hover {
+	BACKGROUND-POSITION: left -25px
+}
+A.ToolBtn-active {
+	BACKGROUND-POSITION: left -25px
+}
+A.ToolBtn:hover SPAN {
+	BACKGROUND-POSITION: right -75px; COLOR: #fff !important
+}
+A.ToolBtn-active SPAN {
+	BACKGROUND-POSITION: right -75px; COLOR: #fff !important
+}
+A.ToolBtn2 {
+	PADDING-LEFT: 5px; DISPLAY: inline-block; BACKGROUND: url(images/tool_btn.png) no-repeat left 0px; TEXT-DECORATION: none !important
+}
+A.ToolBtn2 SPAN {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 8px; PADDING-RIGHT: 13px; DISPLAY: inline-block; BACKGROUND: url(images/tool_btn.png) no-repeat right -50px; HEIGHT: 25px; COLOR: #36434e !important; OVERFLOW: hidden; CURSOR: pointer; PADDING-TOP: 0px
+}
+A.ToolBtn2:hover {
+	BACKGROUND-POSITION: left -25px
+}
+A.ToolBtn2:hover SPAN {
+	BACKGROUND-POSITION: right -75px; COLOR: #fff !important; FONT-WEIGHT: bold
+}
+A.BigBtn {
+	PADDING-LEFT: 10px; DISPLAY: inline-block; BACKGROUND: url(images/big_btn.png) no-repeat left 0px; TEXT-DECORATION: none
+}
+A.BigBtn SPAN {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 5px; PADDING-RIGHT: 18px; DISPLAY: inline-block; BACKGROUND: url(images/big_btn.png) no-repeat right -60px; HEIGHT: 25px; COLOR: #373737 !important; CURSOR: pointer; PADDING-TOP: 0px
+}
+A.BigBtn:hover {
+	BACKGROUND-POSITION: left -30px
+}
+A.BigBtn:hover SPAN {
+	BACKGROUND-POSITION: right -90px; COLOR: #373737 !important
+}
+.loading {
+	TEXT-ALIGN: center; MARGIN-TOP: 10px; BACKGROUND: url(/images/loading.gif) no-repeat center top; PADDING-TOP: 50px
+}
+.loading_16 {
+	TEXT-ALIGN: center; MARGIN-TOP: 10px; BACKGROUND: url(/images/loading_16.gif) no-repeat center top; PADDING-TOP: 25px
+}
+.loading_gray_16 {
+	TEXT-ALIGN: center; MARGIN-TOP: 10px; BACKGROUND: url(/images/loading_gray_16.gif) no-repeat center top; PADDING-TOP: 25px
+}
+.bodycolor {
+	BACKGROUND: #f6f7f9
+}
+.loginbodycolor {
+	BACKGROUND: #6ba2d8
+}
+.topbar {
+	BACKGROUND: url(images/topbar.gif) #c4d9ef; FONT-SIZE: 9pt
+}
+.topbar2 {
+	BACKGROUND: url(images/menubg.gif) #c4d9ef; FONT-SIZE: 9pt
+}
+.panel {
+	BACKGROUND: #c4d9ef; COLOR: #654125
+}
+.timebar {
+	BACKGROUND: #cedff1
+}
+.menu_tr1 {
+	BACKGROUND-IMAGE: url(images/topbar.gif); COLOR: #000000; FONT-SIZE: 9pt; CURSOR: pointer
+}
+.menu_tr2 {
+	BACKGROUND: #cedff1; COLOR: #000000; FONT-SIZE: 9pt; CURSOR: pointer
+}
+.small {
+	FONT-SIZE: 9pt
+}
+.small1 {
+	COLOR: #000000; FONT-SIZE: 9pt
+}
+.big {
+	FONT-SIZE: 12pt
+}
+.big1 {
+	COLOR: #000000; FONT-SIZE: 12pt
+}
+.big2 {
+	FONT-SIZE: 18pt
+}
+.big3 {
+	COLOR: #124164; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+.big4 {
+	COLOR: #ff0000
+}
+.verybig {
+	FONT-SIZE: 24pt
+}
+.ArrowButtonL {
+	WIDTH: 20px; BACKGROUND: url(images/pagebar_bg.png) no-repeat -5px -38px; HEIGHT: 16px
+}
+.ArrowButtonR {
+	WIDTH: 20px; BACKGROUND: url(images/pagebar_bg.png) no-repeat -5px -158px; HEIGHT: 16px
+}
+.ArrowButtonLL {
+	WIDTH: 20px; BACKGROUND: url(images/pagebar_bg.png) no-repeat -5px -308px; HEIGHT: 16px
+}
+.ArrowButtonRR {
+	WIDTH: 20px; BACKGROUND: url(images/pagebar_bg.png) no-repeat -5px -338px; HEIGHT: 16px
+}
+INPUT.SmallButton {
+	BORDER-BOTTOM: #6e91c7 1px solid; BORDER-LEFT: #6e91c7 1px solid; BACKGROUND: url(images/button_bg.gif) #f4fbe1; HEIGHT: 20px; FONT-SIZE: 9pt; BORDER-TOP: #6e91c7 1px solid; BORDER-RIGHT: #6e91c7 1px solid; TEXT-DECORATION: none
+}
+INPUT.ArrowButton {
+	BORDER-BOTTOM: #6e91c7 1px solid; BORDER-LEFT: #6e91c7 1px solid; BACKGROUND: url(images/button_bg.gif) #f4fbe1; HEIGHT: 20px; FONT-SIZE: 9pt; BORDER-TOP: #6e91c7 1px solid; BORDER-RIGHT: #6e91c7 1px solid; TEXT-DECORATION: none
+}
+INPUT.SmallButton:hover {
+	BORDER-BOTTOM: #80aa00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_btn_hover.png) #f4fadf; COLOR: #395500; FONT-SIZE: 9pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #80aa00 1px solid
+}
+INPUT.ArrowButton:hover {
+	BORDER-BOTTOM: #80aa00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_btn_hover.png) #f4fadf; COLOR: #395500; FONT-SIZE: 9pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #80aa00 1px solid
+}
+INPUT.BigButton {
+	BORDER-BOTTOM: #6e91c7 1px solid; BORDER-LEFT: #6e91c7 1px solid; MARGIN: 1px; BACKGROUND: url(images/button_bg.gif) #f4fbe1; HEIGHT: 24px; FONT-SIZE: 12pt; BORDER-TOP: #6e91c7 1px solid; BORDER-RIGHT: #6e91c7 1px solid; TEXT-DECORATION: none
+}
+INPUT.BigButton:hover {
+	BORDER-BOTTOM: #80aa00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_btn_hover.png) #f4fadf; COLOR: #395500; FONT-SIZE: 12pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #80aa00 1px solid
+}
+INPUT.SmallButtonAHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 50px; BACKGROUND: url(images/btn_a.png) no-repeat 0px -21px; HEIGHT: 21px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonA {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 50px; BACKGROUND: url(images/btn_a.png) no-repeat; HEIGHT: 21px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonA:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+INPUT.SmallButtonBHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 74px; BACKGROUND: url(images/btn_b.png) no-repeat 0px -21px; HEIGHT: 21px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonB {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 74px; BACKGROUND: url(images/btn_b.png) no-repeat; HEIGHT: 21px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonB:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+INPUT.SmallButtonCHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 105px; BACKGROUND: url(images/btn_c.png) no-repeat 0px -21px; HEIGHT: 21px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonC {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 105px; BACKGROUND: url(images/btn_c.png) no-repeat; HEIGHT: 21px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonC:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+INPUT.SmallButtonDHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 160px; BACKGROUND: url(images/btn_d.png) no-repeat 0px -21px; HEIGHT: 21px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 160px; BACKGROUND: url(images/btn_d.png) no-repeat; HEIGHT: 21px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonD:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+INPUT.SmallButtonEHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 245px; BACKGROUND: url(images/btn_e.png) no-repeat 0px -21px; HEIGHT: 21px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 245px; BACKGROUND: url(images/btn_e.png) no-repeat; HEIGHT: 21px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.SmallButtonE:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+INPUT.BigButtonAHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 60px; BACKGROUND: url(images/big_btn_a.png) no-repeat 0px -30px; HEIGHT: 27px !important; COLOR: #000000; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonA {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 60px; BACKGROUND: url(images/big_btn_a.png) no-repeat; HEIGHT: 27px !important; COLOR: #36434e; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonA:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+INPUT.BigButtonBHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 84px; BACKGROUND: url(images/big_btn_b.png) no-repeat 0px -30px; HEIGHT: 27px !important; COLOR: #000000; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonB {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 84px; BACKGROUND: url(images/big_btn_b.png) no-repeat; HEIGHT: 27px !important; COLOR: #36434e; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonB:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+INPUT.BigButtonCHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 125px; BACKGROUND: url(images/big_btn_c.png) no-repeat 0px -30px; HEIGHT: 27px !important; COLOR: #000000; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonC {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 125px; BACKGROUND: url(images/big_btn_c.png) no-repeat; HEIGHT: 27px !important; COLOR: #36434e; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonC:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+INPUT.BigButtonDHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 195px; BACKGROUND: url(images/big_btn_d.png) no-repeat 0px -30px; HEIGHT: 27px !important; COLOR: #000000; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 195px; BACKGROUND: url(images/big_btn_d.png) no-repeat; HEIGHT: 27px !important; COLOR: #36434e; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonD:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+INPUT.BigButtonEHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 305px; BACKGROUND: url(images/big_btn_e.png) no-repeat 0px -30px; HEIGHT: 27px !important; COLOR: #000000; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 3px; WIDTH: 305px; BACKGROUND: url(images/big_btn_e.png) no-repeat; HEIGHT: 27px !important; COLOR: #36434e; FONT-SIZE: 12pt; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.BigButtonE:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+INPUT.ToolButtonAHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 50px; BACKGROUND: url(images/tool_btn_a.png) no-repeat 0px -25px; HEIGHT: 25px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonA {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 50px; BACKGROUND: url(images/tool_btn_a.png) no-repeat; HEIGHT: 25px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonA:hover {
+	BACKGROUND-POSITION: 0px -25px
+}
+INPUT.ToolButtonBHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 74px; BACKGROUND: url(images/tool_btn_b.png) no-repeat 0px -25px; HEIGHT: 25px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonB {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 74px; BACKGROUND: url(images/tool_btn_b.png) no-repeat; HEIGHT: 25px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonB:hover {
+	BACKGROUND-POSITION: 0px -25px
+}
+INPUT.ToolButtonCHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 105px; BACKGROUND: url(images/tool_btn_c.png) no-repeat 0px -25px; HEIGHT: 25px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonC {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 105px; BACKGROUND: url(images/tool_btn_c.png) no-repeat; HEIGHT: 25px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonC:hover {
+	BACKGROUND-POSITION: 0px -25px
+}
+INPUT.ToolButtonDHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 160px; BACKGROUND: url(images/tool_btn_d.png) no-repeat 0px -25px; HEIGHT: 25px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 160px; BACKGROUND: url(images/tool_btn_d.png) no-repeat; HEIGHT: 25px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonD:hover {
+	BACKGROUND-POSITION: 0px -25px
+}
+INPUT.ToolButtonEHover {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 245px; BACKGROUND: url(images/tool_btn_e.png) no-repeat 0px -25px; HEIGHT: 25px; COLOR: #000000; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 245px; BACKGROUND: url(images/tool_btn_e.png) no-repeat; HEIGHT: 25px; COLOR: #36434e; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT.ToolButtonE:hover {
+	BACKGROUND-POSITION: 0px -25px
+}
+INPUT.BigInput {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: url(images/bg_input_text.png) white repeat-x 0px -1px; FONT-SIZE: 10pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+TEXTAREA.BigInput {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: url(images/bg_input_text.png) white repeat-x 0px -1px; FONT-SIZE: 10pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+INPUT.BigInput:hover {
+	BORDER-BOTTOM: #99cc00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; FONT-SIZE: 10pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #99cc00 1px solid
+}
+TEXTAREA.BigInput:hover {
+	BORDER-BOTTOM: #99cc00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; FONT-SIZE: 10pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #99cc00 1px solid
+}
+INPUT.SmallInput {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: url(images/bg_input_text.png) white repeat-x 0px -1px; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+TEXTAREA.SmallInput {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: url(images/bg_input_text.png) white repeat-x 0px -1px; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+INPUT.SmallInput:hover {
+	BORDER-BOTTOM: #99cc00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; FONT-SIZE: 9pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #99cc00 1px solid
+}
+TEXTAREA.SmallInput:hover {
+	BORDER-BOTTOM: #99cc00 1px solid; BORDER-LEFT: #99cc00 1px solid; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; FONT-SIZE: 9pt; BORDER-TOP: #99cc00 1px solid; BORDER-RIGHT: #99cc00 1px solid
+}
+INPUT.BigInputMoney {
+	BORDER-BOTTOM: 1px double; TEXT-ALIGN: right; BORDER-LEFT: black 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: #f8f8f8; HEIGHT: 22px; COLOR: #006; FONT-SIZE: 12pt; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: black 1px solid
+}
+INPUT.BigStatic {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #e0e0e0; FONT-SIZE: 10pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+TEXTAREA.BigStatic {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #e0e0e0; FONT-SIZE: 10pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+INPUT.SmallStatic {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #e0e0e0; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+TEXTAREA.SmallStatic {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #e0e0e0; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; BORDER-RIGHT: #c0bbb4 1px solid; PADDING-TOP: 1px
+}
+SELECT.BigSelect {
+	BORDER-BOTTOM: 1px double; BORDER-LEFT: #c0bbb4 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: url(images/bg_input_text.png) white repeat-x left top; HEIGHT: 22px; COLOR: #000066; FONT-SIZE: 12pt; BORDER-TOP: #c0bbb4 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: #c0bbb4 1px solid
+}
+SELECT.BigSelect:hover {
+	BORDER-BOTTOM: 1px double; BORDER-LEFT: #c0bbb4 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; HEIGHT: 22px; COLOR: #000066; FONT-SIZE: 12pt; BORDER-TOP: #c0bbb4 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: #c0bbb4 1px solid
+}
+SELECT.SmallSelect {
+	BORDER-BOTTOM: #c0bbb4 1px solid; BORDER-LEFT: #c0bbb4 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: url(images/bg_input_text.png) white repeat-x left top; HEIGHT: 18px; COLOR: #000066; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: #c0bbb4 1px solid
+}
+SELECT.SmallSelect:hover {
+	BORDER-BOTTOM: 1px double; BORDER-LEFT: #c0bbb4 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: url(images/bg_input_text_hover.png) white repeat-x left top; HEIGHT: 18px; COLOR: #000066; FONT-SIZE: 9pt; BORDER-TOP: #c0bbb4 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: #c0bbb4 1px solid
+}
+SELECT.BigStatic {
+	BORDER-BOTTOM: 1px double; BORDER-LEFT: black 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: #e0e0e0; HEIGHT: 22px; COLOR: #000066; FONT-SIZE: 12pt; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: black 1px solid
+}
+SELECT.SmallStatic {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; LINE-HEIGHT: normal; FONT-VARIANT: normal; FONT-STYLE: normal; BACKGROUND: #e0e0e0; HEIGHT: 18px; COLOR: #000066; FONT-SIZE: 9pt; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: black 1px solid
+}
+.TableControl {
+	BACKGROUND: #e7f0fb
+}
+.TableHeader {
+	LINE-HEIGHT: 21px; BACKGROUND: #5d99da; COLOR: #fff; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.TableContent {
+	BACKGROUND: #f2f8ff
+}
+.TableData {
+	BACKGROUND: #ffffff; COLOR: #000000
+}
+.TableLine1 {
+	BACKGROUND: #f3f3f3
+}
+.TableLine2 {
+	BACKGROUND: #ffffff
+}
+.TableRed {
+	BACKGROUND: #f2f8ff
+}
+.TextColor1 {
+	COLOR: #ff6600
+}
+.TextColor2 {
+	COLOR: #ff0000
+}
+.TextColor3 {
+	COLOR: #808080
+}
+.top {
+	COLOR: #ff0000; FONT-WEIGHT: bold
+}
+.TableHeader A:link {
+	COLOR: #fff
+}
+.TableHeader A:hover {
+	COLOR: #fff
+}
+.TableHeader A:active {
+	COLOR: #fff
+}
+.TableHeader A:visited {
+	COLOR: #fff
+}
+.TableCorner A:link {
+	COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableCorner A:hover {
+	COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableCorner A:active {
+	COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableCorner A:visited {
+	COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableControl A:link {
+	COLOR: #383838
+}
+.TableControl A:hover {
+	COLOR: #383838
+}
+.TableControl A:active {
+	COLOR: #383838
+}
+.TableControl A:visited {
+	COLOR: #383838
+}
+.TableFooter A:link {
+	COLOR: #383838
+}
+.TableFooter A:hover {
+	COLOR: #383838
+}
+.TableFooter A:active {
+	COLOR: #383838
+}
+.TableFooter A:visited {
+	COLOR: #383838
+}
+.percent {
+	BORDER-BOTTOM: #666666 1px solid; BORDER-LEFT: #666666 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 12px; BORDER-TOP: #666666 1px solid; BORDER-RIGHT: #666666 1px solid; PADDING-TOP: 0px
+}
+.percent DIV {
+	BACKGROUND-COLOR: #00ff40; MARGIN: 1px; FLOAT: left; HEIGHT: 8px; FONT-SIZE: 0px
+}
+.percenttxt {
+	MARGIN-TOP: 1px; FLOAT: left; FONT-SIZE: 9pt
+}
+.s_on {
+	BACKGROUND: url(/images/topmenubg2.gif); FONT-SIZE: 9pt
+}
+.s_of {
+	BACKGROUND: url(/images/topmenubg1.gif); FONT-SIZE: 9pt
+}
+.m_on {
+	BACKGROUND: url(/images/topmenubg2.gif); FONT-SIZE: 9pt
+}
+.border14-1 {
+	BORDER-BOTTOM: #2e2e5a 1px solid; BORDER-LEFT: #2e2e5a 1px solid; FONT-SIZE: 14px; BORDER-TOP: #2e2e5a 1px solid; BORDER-RIGHT: #2e2e5a 1px solid
+}
+.border14-2 {
+	BORDER-BOTTOM: #2e2e5a 1px solid; FONT-SIZE: 14px; BORDER-RIGHT: #2e2e5a 1px solid
+}
+.border14-3 {
+	BORDER-BOTTOM: #98bbd6 1px solid; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none
+}
+.border14-4 {
+	FONT-SIZE: 14px; BORDER-RIGHT: #98bbd6 1px solid
+}
+.title_text {
+	COLOR: #0a5fa2; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.table_border {
+	BORDER-BOTTOM: black 0px solid; BORDER-LEFT: #98bbd6 1px solid; BORDER-TOP: #98bbd6 1px solid; BORDER-RIGHT: #98bbd6 1px solid
+}
+.table_bg {
+	BACKGROUND-IMAGE: url(images/bg_header.png); BORDER-BOTTOM: #2e2e5a 0px solid; BORDER-LEFT: black 1px solid; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: left 50%; BORDER-TOP: #2e2e5a 1px solid; BORDER-RIGHT: black 1px solid
+}
+.table_left {
+	BACKGROUND-IMAGE: url(table_left.gif); BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: left 50%
+}
+.attach_name:link {
+	COLOR: #0d3a73
+}
+.attach_name:hover {
+	COLOR: #0d3a73
+}
+.attach_name:active {
+	COLOR: #0d3a73
+}
+.attach_name:visited {
+	COLOR: #0d3a73
+}
+.attach_div {
+	Z-INDEX: 10001; BORDER-BOTTOM: #cccccc 1px solid; POSITION: absolute; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 110px; PADDING-RIGHT: 0px; DISPLAY: none; BACKGROUND: #ffffff; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; PADDING-TOP: 0px
+}
+.attach_div A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block !important; HEIGHT: 25px; COLOR: #393939; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.attach_div A:hover {
+	BACKGROUND: #5d99da; COLOR: #fff; TEXT-DECORATION: none
+}
+.attach_div IMG.ImgHover {
+	BORDER-BOTTOM: #98bbd6 1px solid; BORDER-LEFT: #98bbd6 1px solid; BORDER-TOP: #98bbd6 1px solid; CURSOR: pointer; BORDER-RIGHT: #98bbd6 1px solid
+}
+.attach_div IMG.ImgNormal {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px solid; BORDER-TOP: #fff 1px solid; CURSOR: pointer; BORDER-RIGHT: #fff 1px solid
+}
+.PageHeader {
+	HEIGHT: 79px; COLOR: #666666; PADDING-TOP: 47px
+}
+.PageHeader .title {
+	MARGIN-TOP: 8px; FLOAT: left; FONT-SIZE: 14px; FONT-WEIGHT: bold; MARGIN-RIGHT: 20px
+}
+.PageHeader .header-left {
+	FLOAT: left
+}
+.PageHeader .header-right {
+	FLOAT: right
+}
+.BlockTop {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-SIZE: 12px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockTop TD {
+	TEXT-ALIGN: center; BACKGROUND: url(images/block_top_bg.png) no-repeat 0px -32px; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold
+}
+.BlockTop TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left 0px
+}
+.BlockTop TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 0px -32px
+}
+.BlockTop TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -64px
+}
+.BlockTopInactive {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-SIZE: 12px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockTopInactive TD {
+	TEXT-ALIGN: center; BACKGROUND: url(images/block_top_inactive_bg.png) no-repeat 0px -32px; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold
+}
+.BlockTopInactive TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left 0px
+}
+.BlockTopInactive TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 0px -32px
+}
+.BlockTopInactive TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -64px
+}
+.BlockBottom {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-SIZE: 12px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockBottom TD {
+	TEXT-ALIGN: center; BACKGROUND: url(images/block_bottom_bg.png) no-repeat 0px -32px; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold
+}
+.BlockBottom TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left 0px
+}
+.BlockBottom TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 0px -32px
+}
+.BlockBottom TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -64px
+}
+.BlockBottomInactive {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-SIZE: 12px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockBottomInactive TD {
+	TEXT-ALIGN: center; BACKGROUND: url(images/block_bottom_inactive_bg.png) no-repeat 0px -32px; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold
+}
+.BlockBottomInactive TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left 0px
+}
+.BlockBottomInactive TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 0px -32px
+}
+.BlockBottomInactive TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -64px
+}
+.BlockTop2 {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; OVERFLOW-Y: hidden; WIDTH: 100%; HEIGHT: 5px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockTop2 TD {
+	BACKGROUND: url(images/block_top2_bg.png) no-repeat 0px -5px; FONT-SIZE: 1px
+}
+.BlockTop2 TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left 0px
+}
+.BlockTop2 TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left -5px
+}
+.BlockTop2 TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -10px
+}
+.BlockBottom2 {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; OVERFLOW-Y: hidden; WIDTH: 100%; HEIGHT: 5px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.BlockBottom2 TD {
+	BACKGROUND: url(images/block_top2_bg.png) no-repeat 0px -20px; FONT-SIZE: 1px
+}
+.BlockBottom2 TD.left {
+	WIDTH: 5px; BACKGROUND-POSITION: left -15px
+}
+.BlockBottom2 TD.center {
+	BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left -20px
+}
+.BlockBottom2 TD.right {
+	WIDTH: 5px; BACKGROUND-POSITION: right -25px
+}
+.TableTop {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-SIZE: 12px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.TableTop TD {
+	BACKGROUND: url(images/table_top_bg.png) no-repeat 0px -32px; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableTop TD.left {
+	WIDTH: 5px !important; BACKGROUND-POSITION: left 0px
+}
+.TableTop TD.center {
+	TEXT-ALIGN: center; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 0px -32px
+}
+.TableTop TD.right {
+	WIDTH: 5px !important; BACKGROUND-POSITION: right -64px
+}
+.TableList {
+	BORDER-BOTTOM: #4686c6 1px solid; BORDER-LEFT: #4686c6 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 21px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-COLLAPSE: collapse; FONT-SIZE: 9pt; BORDER-TOP: #4686c6 1px solid; BORDER-RIGHT: #4686c6 1px solid; PADDING-TOP: 3px
+}
+.TableList TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 30px; PADDING-TOP: 3px
+}
+.TableList .TableHeader TD {
+	BORDER-BOTTOM: #4686c6 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #5d99da; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold; BORDER-RIGHT: #4686c6 1px solid; PADDING-TOP: 0px
+}
+.TableList TD.TableHeader {
+	BORDER-BOTTOM: #4686c6 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #5d99da; HEIGHT: 32px; COLOR: #fff; FONT-WEIGHT: bold; BORDER-RIGHT: #4686c6 1px solid; PADDING-TOP: 0px
+}
+.TableList .TableHeader TD.TableCorner {
+	BACKGROUND: #5d99da
+}
+.TableList .TableLine1 TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList TD.TableLine1 {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList .TableLine2 TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList TD.TableLine2 {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList .TableData TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList TD.TableData {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff
+}
+.TableList .TableContent TD {
+	BORDER-BOTTOM: #cfcfcf 1px solid; BACKGROUND: #f2f8ff
+}
+.TableList TD.TableContent {
+	BORDER-BOTTOM: #cfcfcf 1px solid; BACKGROUND: #f2f8ff
+}
+.TableList .TableFooter TD {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableList .TableControl TD {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableList TD.TableFooter {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableList TD.TableControl {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableList .TableRed TD {
+	BACKGROUND: #f2f8ff
+}
+.TableList TD.TableRed {
+	BACKGROUND: #f2f8ff
+}
+.TableList .TextColor1 TD {
+	COLOR: #ff6600
+}
+.TableList TD.TextColor1 {
+	COLOR: #ff6600
+}
+.TableList .TextColor2 TD {
+	COLOR: #ff0000
+}
+.TableList TD.TextColor2 {
+	COLOR: #ff0000
+}
+.TableList .TableLeft TD {
+	BORDER-BOTTOM: #a7bd74 1px solid; BACKGROUND: #f2f8ff
+}
+.TableList TD.TableLeft {
+	BORDER-BOTTOM: #a7bd74 1px solid; BACKGROUND: #f2f8ff
+}
+.TableList .TableRowHover TD {
+	BACKGROUND: #f2f8ff
+}
+.TableList TD.TableRowHover {
+	BACKGROUND: #f2f8ff
+}
+.TableList .TableRowActive TD {
+	BACKGROUND: #e5e5e5
+}
+.TableList TD.TableRowActive {
+	BACKGROUND: #e5e5e5
+}
+.TableBlock {
+	BORDER-BOTTOM: #4686c6 1px solid; BORDER-LEFT: #4686c6 1px solid; LINE-HEIGHT: 20px; BORDER-COLLAPSE: collapse; FONT-SIZE: 9pt; BORDER-TOP: #4686c6 1px solid; BORDER-RIGHT: #4686c6 1px solid
+}
+.TableBlock TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 30px; PADDING-TOP: 3px
+}
+.TableBlock .TableHeader TD {
+	BORDER-BOTTOM: #4686c6 1px solid; BORDER-LEFT: #4686c6 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; BACKGROUND: #5d99da; HEIGHT: 32px; COLOR: #fff; BORDER-TOP: #4686c6 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #4686c6 1px solid; PADDING-TOP: 0px
+}
+.TableBlock TD.TableHeader {
+	BORDER-BOTTOM: #4686c6 1px solid; BORDER-LEFT: #4686c6 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; BACKGROUND: #5d99da; HEIGHT: 32px; COLOR: #fff; BORDER-TOP: #4686c6 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #4686c6 1px solid; PADDING-TOP: 0px
+}
+.TableBlock .TableHeader TD.TableCorner {
+	BACKGROUND: #5d99da; COLOR: #fff; FONT-WEIGHT: bold
+}
+.TableBlock .TableLine1 TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock TD.TableLine1 {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock .TableLine2 TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock TD.TableLine2 {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock .TableData TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock TD.TableData {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #ffffff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock .TableContent TD {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #f2f8ff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock TD.TableContent {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND: #f2f8ff; BORDER-RIGHT: #cccccc 1px solid
+}
+.TableBlock .TableFooter TD {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableBlock .TableControl TD {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableBlock TD.TableFooter {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableBlock TD.TableControl {
+	BORDER-BOTTOM: #cecece 1px solid; BORDER-LEFT: #cecece 1px solid; BACKGROUND: #e7f0fb; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT: #cecece 1px solid
+}
+.TableBlock .TableRed TD {
+	BACKGROUND: #f2f8ff
+}
+.TableBlock TD.TableRed {
+	BACKGROUND: #f2f8ff
+}
+.TableBlock .TableLeft TD {
+	BORDER-BOTTOM: #a7bd74 1px solid; BACKGROUND: #f2f8ff
+}
+.TableBlock TD.TableLeft {
+	BORDER-BOTTOM: #a7bd74 1px solid; BACKGROUND: #f2f8ff
+}
+.Content {
+	LINE-HEIGHT: normal; WORD-WRAP: break-word; WORD-BREAK: break-all
+}
+.TableBlock .TableRowHover TD {
+	BACKGROUND: #f2f8ff
+}
+.TableBlock TD.TableRowHover {
+	BACKGROUND: #f2f8ff
+}
+.TableBlock .TableRowActive TD {
+	BACKGROUND: #e5e5e5
+}
+.TableBlock TD.TableRowActive {
+	BACKGROUND: #e5e5e5
+}
+.no-left-border {
+	BORDER-LEFT: 0px
+}
+.no-top-border {
+	BORDER-TOP: 0px
+}
+.no-right-border {
+	BORDER-RIGHT: 0px
+}
+.no-bottom-border {
+	BORDER-BOTTOM: 0px
+}
+.MessageBox {
+	
+}
+.MessageBox .head {
+	HEIGHT: 32px; OVERFLOW: hidden
+}
+.MessageBox .head .left {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat left 0px
+}
+.MessageBox .head .center {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(images/message_bg.png) repeat-x 0px -32px; PADDING-TOP: 0px
+}
+.MessageBox .head .center .title {
+	MARGIN-TOP: 5px; FLOAT: left; COLOR: #fff; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.MessageBox .head .right {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat right 0px
+}
+.MessageBox .head-no-title {
+	HEIGHT: 16px
+}
+.MessageBox .head-no-title .left {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat left -96px
+}
+.MessageBox .head-no-title .center {
+	BACKGROUND: url(images/message_bg.png) repeat-x 0px -112px
+}
+.MessageBox .head-no-title .right {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat right -96px
+}
+.MessageBox .control {
+	HEIGHT: 40px; VERTICAL-ALIGN: top
+}
+.MessageBox .control .left {
+	WIDTH: 20px; BACKGROUND: url(images/message_center_bg.png) repeat-y left top
+}
+.MessageBox .control .center {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #7bafe6
+}
+.MessageBox .control .right {
+	WIDTH: 20px; BACKGROUND: url(images/message_center_bg.png) repeat-y right top
+}
+.MessageBox .foot {
+	HEIGHT: 16px
+}
+.MessageBox .foot .left {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat left -64px
+}
+.MessageBox .foot .center {
+	BACKGROUND: url(images/message_bg.png) repeat-x 0px -80px
+}
+.MessageBox .foot .right {
+	WIDTH: 20px; BACKGROUND: url(images/message_bg.png) no-repeat right -64px
+}
+.MessageBox .msg {
+	HEIGHT: 90px
+}
+.MessageBox .msg .left {
+	WIDTH: 20px; BACKGROUND: url(images/message_center_bg.png) repeat-y left top
+}
+.MessageBox .msg .center {
+	BACKGROUND-COLOR: #7bafe6; PADDING-LEFT: 90px; FONT-SIZE: 16px
+}
+.MessageBox .msg .center .msg-content {
+	MARGIN: 20px 12px 20px 6px; COLOR: #fff
+}
+.MessageBox .msg .right {
+	WIDTH: 20px; BACKGROUND: url(images/message_center_bg.png) repeat-y right top
+}
+.MessageBox .msg .error {
+	BACKGROUND-IMAGE: url(images/icon64_error.png); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 10px
+}
+.MessageBox .msg .info {
+	BACKGROUND-IMAGE: url(images/icon64_info.png); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 10px
+}
+.MessageBox .msg .warning {
+	BACKGROUND-IMAGE: url(images/icon64_warning.png); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 10px
+}
+.MessageBox .msg .forbidden {
+	BACKGROUND-IMAGE: url(images/icon64_forbidden.png); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 10px
+}
+.MessageBox .msg .stop {
+	BACKGROUND-IMAGE: url(images/icon64_stop.png); BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 10px
+}
+.MessageBox .msg .blank {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 10px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; HEIGHT: 40px; PADDING-TOP: 10px
+}
+.dialog {
+	
+}
+.dialog .head {
+	HEIGHT: 32px; OVERFLOW: hidden
+}
+.dialog .head .left {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat left 0px
+}
+.dialog .head .center {
+	BACKGROUND: url(images/dialog_bg.png) repeat-x 0px -32px
+}
+.dialog .head .center .title {
+	MARGIN-TOP: 5px; FLOAT: left; COLOR: #fff; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.dialog .head .center .close {
+	POSITION: relative; MARGIN-TOP: -1px; WIDTH: 49px; BACKGROUND: url(images/dialog_close_bg.png) no-repeat center top; FLOAT: right; HEIGHT: 24px; MARGIN-RIGHT: -5px
+}
+.dialog .head .center .close:hover {
+	BACKGROUND-POSITION: center -24px
+}
+.dialog .head .right {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat right 0px
+}
+.dialog .top {
+	HEIGHT: 16px
+}
+.dialog .top .left {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat left -96px
+}
+.dialog .top .center {
+	BACKGROUND: url(images/dialog_bg.png) repeat-x 0px -112px
+}
+.dialog .top .right {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat right -96px
+}
+.dialog .body {
+	HEIGHT: 90px
+}
+.dialog .body .left {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_center_bg.png) repeat-y left top
+}
+.dialog .body .center {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #fff
+}
+.dialog .body .center .msg-content {
+	MARGIN: 10px 6px 10px 0px
+}
+.dialog .body .right {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_center_bg.png) repeat-y right top
+}
+.dialog .control {
+	HEIGHT: 40px; VERTICAL-ALIGN: top
+}
+.dialog .control .left {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_center_bg.png) repeat-y left top
+}
+.dialog .control .center {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #fff
+}
+.dialog .control .right {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_center_bg.png) repeat-y right top
+}
+.dialog .foot {
+	HEIGHT: 16px
+}
+.dialog .foot .left {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat left -64px
+}
+.dialog .foot .center {
+	BACKGROUND: url(images/dialog_bg.png) repeat-x 0px -80px
+}
+.dialog .foot .right {
+	WIDTH: 20px; BACKGROUND: url(images/dialog_bg.png) no-repeat right -64px
+}
+.hightlight {
+	PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BACKGROUND: #ffff00; TEXT-DECORATION: underline
+}
+.banned {
+	COLOR: #ff0000
+}
+.mod {
+	COLOR: #000000
+}
+.filter {
+	COLOR: #0000ff
+}
+.pageArea {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 330px; PADDING-RIGHT: 5px; DISPLAY: inline; COLOR: #4e4e4e; PADDING-TOP: 5px
+}
+.pageArea IMG {
+	CURSOR: pointer
+}
+.pageArea A {
+	WIDTH: 30px; DISPLAY: inline-block; BACKGROUND: url(images/pagebar_bg.png) no-repeat center center; HEIGHT: 15px
+}
+.pageArea .pageFirst {
+	BACKGROUND-POSITION: center -8px
+}
+.pageArea .pagePrevious {
+	BACKGROUND-POSITION: center -38px
+}
+.pageArea .pageFirstDisable {
+	BACKGROUND-POSITION: center -68px
+}
+.pageArea .pagePreviousDisable {
+	BACKGROUND-POSITION: center -98px
+}
+.pageArea .pageLast {
+	BACKGROUND-POSITION: center -128px
+}
+.pageArea .pageNext {
+	BACKGROUND-POSITION: center -158px
+}
+.pageArea .pageLastDisable {
+	BACKGROUND-POSITION: center -188px
+}
+.pageArea .pageNextDisable {
+	BACKGROUND-POSITION: center -218px
+}
+.pageArea .pageGoto {
+	BACKGROUND-POSITION: center -240px; HEIGHT: 25px
+}
+.pageArea .pageGoto:hover {
+	BACKGROUND-POSITION: center -270px
+}
+.ColorTable {
+	BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; MARGIN: 0px; BACKGROUND: #f5fbff; BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid
+}
+.ColorTable TD {
+	BORDER-BOTTOM: #f5fbff 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-SIZE: 12px; FONT-WEIGHT: bold; BORDER-RIGHT: #f5fbff 1px solid; PADDING-TOP: 2px
+}
+.ColorTable TD.Selected {
+	BORDER-BOTTOM: #316ac5 1px solid; BORDER-LEFT: #316ac5 1px solid; BACKGROUND: #dff1ff; BORDER-TOP: #316ac5 1px solid; CURSOR: pointer; BORDER-RIGHT: #316ac5 1px solid
+}
+.ColorTable TD DIV {
+	BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; CURSOR: pointer; BORDER-RIGHT: #bbbbbb 1px solid
+}
+#overlay {
+	Z-INDEX: 10; POSITION: absolute; FILTER: alpha(opacity=60); WIDTH: 100%; DISPLAY: none; BACKGROUND: #000; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.6; -moz-opacity: 0.6
+}
+.dialogContainer {
+	Z-INDEX: 65535; POSITION: absolute; DISPLAY: none; TOP: 60px; LEFT: 200px
+}
+.scroll-left {
+	WIDTH: 16px; BACKGROUND: url(images/hscroll_arrow.png) no-repeat -1px center; CURSOR: pointer
+}
+.scroll-left-active {
+	WIDTH: 16px; BACKGROUND: url(images/hscroll_arrow.png) no-repeat -34px center; CURSOR: pointer
+}
+.scroll-right {
+	WIDTH: 16px; BACKGROUND: url(images/hscroll_arrow.png) no-repeat -16px center; CURSOR: pointer
+}
+.scroll-right-active {
+	WIDTH: 16px; BACKGROUND: url(images/hscroll_arrow.png) no-repeat -48px center; CURSOR: pointer
+}
+.red {
+	COLOR: red
+}
+TABLE.card .info .offline {
+	PADDING-LEFT: 0px; COLOR: #a0a0a0
+}
+.online-0 {
+	BACKGROUND: url(/images/client_type_0.png) no-repeat left center
+}
+.online-1 {
+	BACKGROUND: url(/images/client_type_1.png) no-repeat left center
+}
+.online-2 {
+	BACKGROUND: url(/images/client_type_2.png) no-repeat left center
+}
+.online-5 {
+	BACKGROUND: url(/images/client_type_5.png) no-repeat left center
+}
+.online-6 {
+	BACKGROUND: url(/images/client_type_6.png) no-repeat left center
+}
+
+
+
+
+	.wrap_3 ul li.li_t{
+		margin-top:5px;
+		height:20px;
+	}
+	.wrap_3 ul li.infoico{
+		background:url(../images/que.png) 0 0 no-repeat;
+	}
+	.wrap_3 ul li.li_rep div{
+		width:800px;
+	}
+	.wrap_3 ul li.li_rep div.title{
+		font:13px Verdana, Geneva, sans-serif,'Î¢ÈíÑÅºÚ';
+		font-weight:bold;
+		margin-bottom: 5px;
+	}
+	.link{
+		font-size: 12px;
+	}
+	.wrap_3 ul li.li_rep .repbtn{
+		float:right;
+		margin-top: 5px
+	}
+	.wrap_3 ul li span{
+		display:block;
+		text-align:right;
+		font-size: 11px
+	}
+	.wrap_3 ul li span.title{
+		text-align:left;
+		font:14px Verdana, Geneva, sans-serif,'Î¢ÈíÑÅºÚ';
+		font-weight:bold;
+	}
+	.wrap_3{
+		width:800px;
+		overflow:hidden;
+		padding-top:10px;
+	}
+	.wrap_3 ul{
+		float:left;
+		padding:0;
+		margin:0;
+	}
+	.wrap_3 ul li{
+		border-bottom:1px dashed #bfd8e3;
+		width:800px;
+		padding-bottom:5px;
+		float:left;
+	}
+	.ico{
+		float:left;
+		background:url(../images/info.gif) 0 0 no-repeat;
+		height:16px;
+		width:16px;
+	}
+	.p2{
+		font-size:12px;
+		line-height:20px;
+		width:590px;
+		padding-left:27px;
+		word-wrap:break-word;
+	}
+	.l-form li {
+		float: left;
+	    overflow: hidden;
+	    padding: 2px 0;
+	    line-height: 15px;
+	}
+
+
+
+
+ul{ padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; 
+margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;
+list-style-type: none; list-style-position: outside; list-style-image: none; 
+}
+.w { 
+ margin-right: auto; margin-bottom: 0px; margin-left: auto; min-width: 920px;
+}
+#process {
+padding-top:0px; padding-right: 0px; padding-bottom: 30px; padding-left: 0px; 
+margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; 
+}
+.section3 {width: 1200px;min-width: 920px;}
+#process .node, #process .proce { height: 13px; float: left; position: relative; background-repeat: no-repeat; background-image: url(../img/workflow/bg_state.jpg); }
+#process .node { width: 13px; }
+#process .proce { 
+width: 110px; border-top-color: #fff; border-right-color: #fff; 
+border-bottom-color: #fff; border-left-color: #fff; border-top-width: 0px; border-right-width: 5px; 
+border-bottom-width: 0px; border-left-width: 5px; border-top-style: solid; border-right-style: solid; 
+border-bottom-style: solid; border-left-style: solid; 
+}
+       
+#process .tx1 { height: 36px; margin-bottom: 16px;}
+#process .tx3 { color: #999; line-height: 15px;}
+.ready.node { background-position: -110px 0px;}
+.ready.proce { background-position: 0px 0px;}
+.gray.node { background-position: -110px -40px;}
+.gray.proce { background-position: 0px -40px;}
+.current.node { background-position: -110px -60px;}
+.current.proce { background-position: 0px -20px;}
+
+#process ul { text-align: center; margin-top:15px; position: absolute;}
+#process .proce ul { width: 150px; z-index: 5;}
+#process .node ul { width: 318px; margin-left: -152px; z-index: 1;}	
+
+
+.textarea-hidden{
+	border: 0;overflow: hidden;background-color: #FFFEF8;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+.chkbox_unchecked{
+	width:38px;
+	height:38px;
+	background:url(chkbox.png) 0 0 no-repeat;
+	float:left;
+}
+.chkbox_checked{
+	width:38px;
+	height:38px;
+	background:url(chkbox.png) -38px 0 no-repeat;
+	float:left;
+}
+.chkboxNote{
+	line-height:40px;
+	font-size:24px;
+};
+</style>
+</head>
+
+<body>
+	<form name="myform">
+        <div class="chkbox_unchecked" id="chkbox1"></div><span class="chkboxNote">我已注册CSDN</span>
+        <input type="hidden" name="chkReg" value="false" />
+    </form>
+</body>
+<script language="javascript">
+	var clickObj = document.getElementById("chkbox1");
+	var chkObj = document.forms.myform.chkReg;
+	clickObj.onclick = function(){
+		chkObj.value = (chkObj.value == "true")?"false":"true";
+		if(chkObj.value == "true"){
+			document.getElementById("chkbox1").className = "chkbox_checked";
+		}else{
+			document.getElementById("chkbox1").className = "chkbox_unchecked";
+		}
+	}
+</script>
+</html>

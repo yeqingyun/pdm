@@ -1,0 +1,9 @@
+*{margin:1;padding:1;}
+body{background:#FFFEF8;}
+input{
+	border:1px solid #c0c0c0;
+}
+body,table {
+	font-family: arial, 宋体, serif; 
+	font-size:12px; 
+} 

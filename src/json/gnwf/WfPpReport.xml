@@ -1,0 +1,15 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfppReport" extends="webwork-default,intercept">
+		<action name="wfppReport" class="gnwf.ww.json.WfPpReportAction">
+			<result name="message">/liger/gnwf/WfPp/data.jsp</result>
+			<result name="view">/liger/gnwf/WfPp/repoertMain.jsp</result>
+			<result name="ReportOneByDev">/liger/gnwf/WfPp/report.jsp</result>
+			<result name="list">/liger/gnwf/WfPp/data.jsp</result>
+			
+		</action>
+		
+	</package>
+</xwork>

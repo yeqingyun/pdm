@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="gpSco" extends="webwork-default,intercept">
+		<action name="GpSco" class="zrsy.ww.json.GpScoAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrsy/GpSco/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrsy/GpSco/add.jsp</result>
+			<result name="edit">/liger/zrsy/GpSco/edit.jsp</result>
+			<result name="view">/liger/zrsy/GpSco/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrsy/GpSco/upload.jsp</result>
+			<result name="print">/liger/zrsy/GpSco/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">gpScoxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

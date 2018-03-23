@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr,input,select{ margin:0; padding:0;}
+input{
+	border:none;
+}
+body{
+	background-color:#FFF; 
+	font:12px/1.5 "宋体",Tahoma,Arial,Sans-serif;
+	color:#000;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol, ul, li {
+    list-style: none outside none;
+}
+.clear{
+	clear:both;
+}
+.font16{
+	font-size:14px;
+	font-family:"黑体",Tahoma,Arial,Sans-serif;
+}
+.margin22{
+	margin-bottom:22px;
+}
+.center{
+	text-align:center;
+}
+.box{
+	width:1200px;
+	margin:0 auto;
+	border:1px solid #BED5F3;
+	border-top:none;
+}
+.titie{
+	background:url(../images/titile_bg.png) 0 0 repeat-x;
+	height:28px;
+	line-height:28px;
+}
+.titieT{
+	background:url(../images/longBg.jpg) 0 0 repeat-x;
+	height:28px;
+	line-height:28px;
+}
+.arrow{
+	padding:0 5px 0 5px;
+}
+.content01 table{
+	text-align:center;
+}
+.content01 table td{
+	border:1px solid #99C5FD;
+	border-top:none;
+	border-right:none;
+}
+.content01 table td.f{
+	border-left:none;
+}
+.contBg{
+	background:url(../images/contBg.png) 0 0 repeat-x;
+	height:39px;
+	line-height:39px;
+}
+.rtBg{
+	background:url(../images/titile_bg.png) top right no-repeat;
+}
+.con{
+	background-color:#F2F2F2;
+	border-bottom:1px solid #DCDCDC;
+	padding:12px 22px;
+}
+.bord01{
+	border-bottom:1px solid #DCDCDC;
+}
+h2{
+	background:url(../images/pic_x.jpg) 0 0 no-repeat;
+	height:28px;
+	line-height:28px;
+	padding-left:44px;
+}
+h2.h01{
+	background:url(../images/pic_x.jpg) 0 -28px no-repeat;
+}
+h2.h02{
+	background:url(../images/pic_x.jpg) 0 -56px no-repeat;
+}
+h2.h03{
+	background:url(../images/pic_x.jpg) 0 -84px no-repeat;
+}
+h2.h04{
+	background:url(../images/pic_x.jpg) 0 -112px no-repeat;
+}
+.content04 table,.content05 table{
+	text-align:center;
+	line-height:24px;
+}
+.content04 table tr th{
+	background-color:#D7DBDD;
+	border-right:1px solid #c4c8ca;
+}
+.trBg{
+	background:#E2EDFA;
+}
+.content04 table td,.content05 table td
+{
+	border-right:1px solid #C4C8CA;
+}
+
+bordNone{
+	border-right:none;
+}
+.content05{
+}
+.content06 h2{
+/*	display:inline-block;*/
+	width:130px;
+	height:28px;
+	line-height:28px;
+	float:left;
+}
+}
+.content06 ul{
+	float:left;
+}
+.content06 ul li{
+	float:left;
+		height:21px;
+	line-height:21px;
+	margin:3px 0;
+	padding:0 40px 0 18px;
+	text-decoration:underline;
+}	
+.content06 ul li a{
+	color:#F00;	
+}

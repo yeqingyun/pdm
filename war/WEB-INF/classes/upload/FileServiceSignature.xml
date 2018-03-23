@@ -1,0 +1,11 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="addrBook" extends="webwork-default,intercept">
+		<action name="FileServiceSignature" class="upload.FileServiceSignatureAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

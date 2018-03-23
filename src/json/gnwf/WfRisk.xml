@@ -1,0 +1,45 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="WfRisk" extends="webwork-default,intercept">
+		<action name="WfRisk" class="gnwf.ww.json.WfRiskAction">
+			<interceptor-ref name="permissionStack"/>
+			 
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnwf/WfQues/list.jsp</result>
+			<result name="mytasklist">/liger/gnwf/WfQues/myTaskList.jsp</result>
+			<result name="tasklist">/liger/gnwf/WfQues/tasklistmgr.jsp?taskId=${taskId}&amp;wfNo=${wfNo}</result>
+			<result name="tasklistmgr">/liger/gnwf/WfQues/tasklistmgr.jsp?taskId=${taskId}&amp;wfNo=${wfNo}</result>
+			<result name="schelist">/liger/gnwf/WfQues/schelist.jsp?prjtNo=${prjtNo}&amp;isRisk=${isRisk}</result>
+			<result name="success">/jsp/app.jsp</result>
+			
+			<result name="addrisk">/liger/gnwf/WfQues/addrisk.jsp</result>
+			<result name="add">/liger/gnwf/WfQues/add.jsp</result>
+			<result name="edit">/liger/gnwf/WfQues/edit.jsp</result>
+			<result name="view">/liger/gnwf/WfQues/view.jsp</result>
+			
+			<result name="retrans">/liger/zrprjt/PrjtUsr/selectPrjtUsr.jsp</result>
+			
+			<result name="quesManager">/liger/gnwf/WfQues/quesManager.jsp</result>
+			<result name="uploadFile">/liger/gnwf/WfQues/uploadFile.jsp</result>
+			<result name="riskQuesManager">/liger/gnwf/WfQues/RiskQuesManager.jsp</result>
+			 
+			<!--    以下新增			 -->
+			<result name="riskList">/liger/gnwf/WfRisk/riskList.jsp</result>
+			<result name="app">/jsp/app.jsp</result>
+			<result name="error">/jsp/msg.jsp</result>
+			<result name="addRisk">/liger/gnwf/WfRisk/addRisk.jsp</result>
+			<result name="selcResponsible">/liger/zrprjt/PrjtUsr/selectResponsible.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="managerRisk">/liger/gnwf/WfRisk/managerRisk.jsp</result>
+			<result name="wfRdRiskList">/liger/gnwf/WfRisk/wfRdRiskList.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfRiskxls</param>
+			</result>
+			<result name="upload">/liger/gnwf/WfRisk/upload.jsp</result>
+			<result name="editorRiskUI">/liger/gnwf/WfRisk/editorRisk.jsp</result>
+		</action>
+	</package>
+</xwork>

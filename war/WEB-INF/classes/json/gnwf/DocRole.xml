@@ -1,0 +1,13 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="docRole" extends="webwork-default,intercept">
+		<action name="DocRole" class="gnwf.ww.json.DocRoleAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="msg">/jsp/msg.jsp</result>
+			<result name="view">/liger/gnwf/DocRole/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+		</action>
+	</package>
+</xwork>

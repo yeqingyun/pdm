@@ -1,0 +1,25 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="driverDtl" extends="webwork-default,intercept">
+		<action name="DriverDtl" class="zrprjt.ww.json.DriverDtlAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/zrprjt/DriverDtl/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/zrprjt/DriverDtl/add.jsp</result>
+			<result name="edit">/liger/zrprjt/DriverDtl/edit.jsp</result>
+			<result name="view">/liger/zrprjt/DriverDtl/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="upload">/liger/zrprjt/DriverDtl/upload.jsp</result>
+			<result name="print">/liger/zrprjt/DriverDtl/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">driverDtlxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+		</action>
+	</package>
+</xwork>

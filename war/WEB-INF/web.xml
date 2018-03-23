@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<context-param>
+		<param-name>gngile_upload_URL</param-name>
+		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!upload.shtml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>gngile_download_URL</param-name>
+		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!downloadProcFile.shtml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>gngile_trans_URL</param-name>
+		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!transToBasicLib.shtml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>server_URL</param-name>
+		<!--<param-value>http://18.8.19.177:28080/zrprjt/</param-value>		-->
+		<param-value>http://192.168.189.33:8080/zrprjt/</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>Set Character Encoding</filter-name>
+		<filter-class>zrsy.ww.SetCharacterEncodingFilter</filter-class>
+
+		<init-param>
+
+			<param-name>encoding</param-name>
+
+			<param-value>UTF8</param-value>
+
+		</init-param>
+
+		<init-param>
+
+			<param-name>ignore</param-name>
+
+			<param-value>true</param-value>
+
+		</init-param>
+
+	</filter>
+
+	<filter-mapping>
+
+		<filter-name>Set Character Encoding</filter-name>
+
+		<url-pattern>/*</url-pattern>
+
+	</filter-mapping>
+		 
+	<!-- 发送邮件定时器 -->
+	<!--  
+	<listener><listener-class>zrsy.listener.SyScheListener</listener-class></listener>  
+	-->
+     
+	<servlet>
+		<servlet-name>webwork</servlet-name>
+		<servlet-class>com.opensymphony.webwork.dispatcher.ServletDispatcher</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- quartz定时任务 -->
+	<!--  
+	<servlet>
+	    <servlet-name>QuartzInitializer</servlet-name>
+	    <servlet-class>
+	      org.quartz.ee.servlet.QuartzInitializerServlet
+	    </servlet-class>
+	    <init-param>
+	      <param-name>config-file</param-name>
+	      <param-value>/quartz.properties</param-value>
+	    </init-param>
+	    <init-param>
+	      <param-name>shutdown-on-unload</param-name>
+	      <param-value>true</param-value>
+	    </init-param>
+	    <load-on-startup>2</load-on-startup>
+	</servlet>
+	-->
+	
+	<servlet-mapping>
+		<servlet-name>webwork</servlet-name>
+		<url-pattern>*.shtml</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>webwork</servlet-name>
+		<url-pattern>*.dhtml</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>300</session-timeout>
+	</session-config>
+
+	<mime-mapping>
+		<extension>xls</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>rar</extension>
+		<mime-type>application/zip</mime-type>
+	</mime-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Login.shtml</welcome-file>
+		<welcome-file>login.shtml</welcome-file>
+	</welcome-file-list>
+
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/c.tld</taglib-location>
+	</taglib>
+
+	<resource-ref>
+		<res-ref-name>jdbc/gdb0</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<resource-ref>
+		<res-ref-name>jdbc/gdb1</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<resource-ref>
+		<res-ref-name>jdbc/gdb3</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<resource-ref>
+		<res-ref-name>jdbc/gdb4</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+</web-app>

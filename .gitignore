@@ -1,0 +1,4 @@
+**/cvs/*
+*.class
+.settings/*
+*.iml

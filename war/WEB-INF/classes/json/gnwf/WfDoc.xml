@@ -1,0 +1,41 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+	<include file="xwork-intercept.xml"/>
+	<package name="wfDoc" extends="webwork-default,intercept">
+		<action name="WfDoc" class="gnwf.ww.json.WfDocAction">
+			<interceptor-ref name="permissionStack"/>
+			<result name="nologgedin">/jsp/msg.jsp</result>
+			<result name="nopermission">/jsp/msg.jsp</result>
+			<result name="initializes">/liger/gnwf/WfDoc/list.jsp</result>
+			<result name="success">/jsp/app.jsp</result>
+			<result name="message">/jsp/msg.jsp</result>
+			<result name="add">/liger/gnwf/WfDoc/add.jsp</result>
+			<result name="edit">/liger/gnwf/WfDoc/edit.jsp</result>
+			<result name="view">/liger/gnwf/WfDoc/view.jsp</result>
+			<result name="list">/jsp/app.jsp</result>
+			<result name="download" type="stream">
+			     <param name="inputName">inputStream</param>
+			     <param name="contentType">${contentType}</param>
+			     <param name="contentDisposition">attachment;filename="${fileName}"</param>
+			     <param name="bufferSize">2048</param>
+			</result>
+			<result name="upload">/liger/gnwf/WfDoc/upload.jsp</result>
+			<result name="print">/liger/gnwf/WfDoc/print.jsp</result>
+			<result name="excel" type="excel">
+				<param name="filename">wfDocxls</param>
+			</result>
+			<result name="error">/jsp/msg.jsp</result>
+			
+			
+			<result name="main">/liger/gnwf/WfDoc/mainFilelist.jsp</result>
+			<result name="pdoc">/liger/gnwf/WfDoc/pDoc.jsp</result>
+			<result name="bdoc">/liger/gnwf/WfDoc/bDoc.jsp</result>
+			<result name="slib">/liger/gnwf/WfDoc/sLib.jsp</result>
+			<result name="openPigeonholeWin">/liger/gnwf/WfDoc/bPigeonhole.jsp</result>
+			<result name="openShareWin">/liger/gnwf/WfDoc/bShara.jsp</result>
+			<result name="openUpdateWin">/liger/gnwf/WfDoc/bUpdate.jsp</result>
+			<result name="openBSharaDetlWin">/liger/gnwf/WfDoc/bSharaDetl.jsp</result>
+		</action>
+	</package>
+</xwork>
