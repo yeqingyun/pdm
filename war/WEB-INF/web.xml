@@ -5,23 +5,23 @@
 
 	<context-param>
 		<param-name>gngile_upload_URL</param-name>
-		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!upload.shtml</param-value>
+		<param-value>secret</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>gngile_download_URL</param-name>
-		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!downloadProcFile.shtml</param-value>
+		<param-value>secret</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>gngile_trans_URL</param-name>
-		<param-value>http://gnfile.gionee.com:28080/gnfs/GnFileService!transToBasicLib.shtml</param-value>
+		<param-value>secret</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>server_URL</param-name>
 		<!--<param-value>http://18.8.19.177:28080/zrprjt/</param-value>		-->
-		<param-value>http://192.168.189.33:8080/zrprjt/</param-value>
+		<param-value>secret</param-value>
 	</context-param>
 
 	<filter>
