@@ -3,9 +3,9 @@
         <Resource name="jdbc/gdb1"
             	type="javax.sql.DataSource"
             	driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-            	username="sa"
-				password="12345678"
-            	url="jdbc:sqlserver://192.168.0.44:1433;DatabaseName=ZrPrjt"
+            	username="secret"
+				password="secret"
+            	url="secret"
             	maxIdle="2"
             	maxWait="5000"
             	maxActive="4"/>
